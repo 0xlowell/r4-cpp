@@ -7,7 +7,7 @@ Notions:
 </br>
 
 ---
-| Function | Exemple | #include | Notions |
+| Function | Exemple | #include | 
 |----------|----------|----------|--|
 | `std::cout` | `std::cout << "Hello World" << std::endl;` | `<iostream>` |
 
