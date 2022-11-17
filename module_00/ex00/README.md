@@ -7,9 +7,10 @@ Notions:
 </br>
 
 
-`std::cout` (ex: `std::cout << "Hello World" << std::endl;`) `#include <iostream>`
+`std::cout` 
 ---
-
+(ex: `std::cout << "Hello World" << std::endl;`) `#include <iostream>`
+</br>
 Object of class ostream that represents the standard output stream oriented to narrow characters (of type char). It corresponds to the C stream stdout.
 
 The standard output stream is the default destination of characters determined by the environment. This destination may be shared with more standard objects (such as cerr or clog).
