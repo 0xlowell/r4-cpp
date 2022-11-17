@@ -22,7 +22,7 @@ Write class names in UpperCamelCase format (CPP is case sensitive)
 
 Notions: 
 </br>
-</br>
+</hr>
 `std::cout` Object of class ostream that represents the standard output stream oriented to narrow characters (of type char). It corresponds to the C stream stdout.
 
 The standard output stream is the default destination of characters determined by the environment. This destination may be shared with more standard objects (such as cerr or clog).
