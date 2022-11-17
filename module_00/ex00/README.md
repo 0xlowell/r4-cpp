@@ -7,8 +7,9 @@ Notions:
 </br>
 
 
-`std::cout` 
+`std::cout` (ex: `std::cout << "Hello World" << std::endl;`) `#include <iostream>`
 ---
+
 Object of class ostream that represents the standard output stream oriented to narrow characters (of type char). It corresponds to the C stream stdout.
 
 The standard output stream is the default destination of characters determined by the environment. This destination may be shared with more standard objects (such as cerr or clog).
@@ -19,27 +20,20 @@ The object is declared in header <iostream> with external linkage and static dur
 </br>
 </br>
 
-`std::string`
+`std::endl` (ex: `std::cout << "Hello World" << std::endl;`) `#include <ostream> <iostream>`
+
+`std::string` (ex: `std::string str = argv[i];`) `#include <string>`
 ---
 Strings are objects that represent sequences of characters.
-
-The standard string class provides support for such objects with an interface similar to that of a standard container of bytes, but adding features specifically designed to operate with strings of single-byte characters.
-
-The string class is an instantiation of the basic_string class template that uses char (i.e., bytes) as its character type, with its default char_traits and allocator types (see basic_string for more info on the template).
-
-Note that this class handles bytes independently of the encoding used: If used to handle sequences of multi-byte or variable-length characters (such as UTF-8), all members of this class (such as length or size), as well as its iterators, will still operate in terms of bytes (not actual encoded characters).
-</br>
 </br>
 
-`size_t length() const;` (ex: `str.length()`) 
+std::string.lenght() (ex: `str.length()`)  
 ---
-Return length of string
 Returns the length of the string, in terms of bytes.
 
 This is the number of actual bytes that conform the contents of the string, which is not necessarily equal to its storage capacity.
 
-Note that string objects handle bytes without knowledge of the encoding that may eventually be used to encode the characters it contains. Therefore, the value returned may not correspond to the actual number of encoded characters in sequences of multi-byte or variable-length characters (such as UTF-8).
+`size_t length() const;`
+</br>
 
-Both string::size and string::length are synonyms and return the exact same value.
-</br>
-</br>
+std::toupper(std::string str[i])
