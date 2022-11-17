@@ -9,23 +9,23 @@ Notions:
 
 `std::cout` 
 --- 
-Exemple : `std::cout << "Hello World" << std::endl;`) `#include <iostream>`
+Exemple : `std::cout << "Hello World" << std::endl;`) </br>
+#include `<iostream>`</br>
 </br>
-</br>
-Object of class ostream that represents the standard output stream oriented to narrow characters (of type char). It corresponds to the C stream stdout.
+Object of class ostream that represents the standard output stream oriented to narrow characters (of type char). It corresponds to the C stream stdout.</br>
 
-The standard output stream is the default destination of characters determined by the environment. This destination may be shared with more standard objects (such as cerr or clog).
+The standard output stream is the default destination of characters determined by the environment. This destination may be shared with more standard objects (such as cerr or clog).</br>
 
-As an object of class ostream, characters can be written to it either as formatted data using the insertion operator (operator<<) or as unformatted data, using member functions such as write.
+As an object of class ostream, characters can be written to it either as formatted data using the insertion operator (operator<<) or as unformatted data, using member functions such as write.</br>
 
-The object is declared in header <iostream> with external linkage and static duration: it lasts the entire duration of the program.
-</br>
+The object is declared in header <iostream> with external linkage and static duration: it lasts the entire duration of the program.</br>
+
 </br>
 
 `std::endl` 
 ---
-Exemple : `std::cout << "Hello World" << std::endl;` 
-#include `<ostream> <iostream>`
+Exemple : `std::cout << "Hello World" << std::endl;` </br>
+#include `<ostream> <iostream>`</br>
 
 `std::string` 
 ---
