@@ -1,4 +1,4 @@
-| CPP exercices |     Notions    | CPP modules
+| CPP exercices |     Notions    | CPP modules |
 |----------|----------|----------|
 | [ex00 - megaphone](https://github.com/Elwoll/r4-cpp/tree/main/module_00/ex00) | Basics notions of cpp  | [module00](https://github.com/Elwoll/r4-cpp/tree/main/module_00) |
 
@@ -7,10 +7,10 @@ Notions:
 </br>
 
 
-`std::cout` 
+| Function | Exemple | Include |
+|----------|----------|----------|
+| `std::cout` | `std::cout << "Hello World" << std::endl;` | `<iostream>` |
 --- 
-Exemple : `std::cout << "Hello World" << std::endl;`) </br>
-#include `<iostream>`</br>
 </br>
 Object of class ostream that represents the standard output stream oriented to narrow characters (of type char). It corresponds to the C stream stdout.</br>
 
@@ -18,7 +18,7 @@ The standard output stream is the default destination of characters determined b
 
 As an object of class ostream, characters can be written to it either as formatted data using the insertion operator (operator<<) or as unformatted data, using member functions such as write.</br>
 
-The object is declared in header <iostream> with external linkage and static duration: it lasts the entire duration of the program.</br>
+The object is declared in header `<iostream>` with external linkage and static duration: it lasts the entire duration of the program.</br>
 
 </br>
 
