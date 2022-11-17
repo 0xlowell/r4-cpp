@@ -8,7 +8,9 @@ Notions:
 
 
 `std::cout` 
---- exemple : `std::cout << "Hello World" << std::endl;`) `#include <iostream>`
+--- 
+Exemple : `std::cout << "Hello World" << std::endl;`) `#include <iostream>`
+</br>
 </br>
 Object of class ostream that represents the standard output stream oriented to narrow characters (of type char). It corresponds to the C stream stdout.
 
@@ -20,10 +22,16 @@ The object is declared in header <iostream> with external linkage and static dur
 </br>
 </br>
 
-`std::endl` (ex: `std::cout << "Hello World" << std::endl;`) `#include <ostream> <iostream>`
-
-`std::string` (ex: `std::string str = argv[i];`) `#include <string>`
+`std::endl` 
 ---
+Exemple : `std::cout << "Hello World" << std::endl;` 
+#include `<ostream> <iostream>`
+
+`std::string` 
+---
+(ex: `std::string str = argv[i];`) `#include <string>`
+</br>
+</br>
 Strings are objects that represent sequences of characters.
 </br>
 
