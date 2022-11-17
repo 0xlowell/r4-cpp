@@ -33,6 +33,11 @@ ${O_DIR}:
 
 ${O_DIR}%.o:%.cpp
 				@${CC} ${CPP_FLAGS} -o $@ -c $<
+				@printf "☎️ PhoneBook ☎️\n"
+				@printf "Use only ADD, SEARCH, EXIT\n"
+				@printf "ADD: to save a new contact (8 contacts max)\n"
+				@printf "SEARCH: to display a specific contact\n"
+				@printf "EXIT: to exit program\n"
 
 clean :
 				@${RM} ${O_DIR}
