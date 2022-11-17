@@ -5,8 +5,12 @@
 # General rules
 
 Compile your code with </br>
+<<<<<<< 290c1270c1dd317cd9e246225b7aaf2647eadbd1
 `c++` `-Wall -Wextra -Werror` `-std=c++98` `-pedantic` </br>
 Meaning of ->[-pedantic](https://stackoverflow.com/questions/2855121/what-is-the-purpose-of-using-pedantic-in-the-gcc-g-compiler)
+=======
+`c++` `-Wall -Wextra -Werror` `-std=c++98` `[-pedantic]`(https://stackoverflow.com/questions/2855121/what-is-the-purpose-of-using-pedantic-in-the-gcc-g-compiler)
+>>>>>>> Update README.md
 
 Write class names in UpperCamelCase format (CPP is case sensitive)
 
