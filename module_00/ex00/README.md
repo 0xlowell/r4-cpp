@@ -8,8 +8,7 @@ Notions:
 
 
 `std::cout` 
----
-(ex: `std::cout << "Hello World" << std::endl;`) `#include <iostream>`
+--- exemple : `std::cout << "Hello World" << std::endl;`) `#include <iostream>`
 </br>
 Object of class ostream that represents the standard output stream oriented to narrow characters (of type char). It corresponds to the C stream stdout.
 
