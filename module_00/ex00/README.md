@@ -4,48 +4,52 @@
 
 Notions: 
 ---
-| Function | Exemple | #include | Notions |
-|----------|----------|----------|
-| `std::cout` | `std::cout << "Hello World" << std::endl;` | `<iostream>` | Standard output stream oriented to narrow characters (of type char). It corresponds to the C stream stdout. |
 
---- 
-</br>
-
-| `std::endl`  | `std::cout << "Hello World" << std::endl;` |  `<ostream> <iostream>` | Inserts a new-line character and flushes the stream. |
-|--|--|--|--|
-
-Inserts a new-line character and flushes the stream. </br>
-
+`std::cout`
 ---
+| `<iostream>` | Standard output stream oriented to narrow characters (of type char). It corresponds to the C stream stdout. |
+--|:--
+
+Example: `std::cout << "Hello World" << std::endl;`
+|--|
 </br>
 
- Function | Exemple | #include |
-|----------|----------|----------|
-| `std::string`   | `std::string str = argv[i];` |   `<string>` |
-
-Strings are objects that represent sequences of characters.
-
+`std::endl` 
 ---
+| `<ostream> <iostream>` | Inserts a new-line character and flushes the stream. |
+--|:--
+
+Example: `std::cout << "Hello World" << std::endl;`
+|--|
 </br>
 
-Function | Exemple | #include |
-|----------|----------|----------|
-| `std::string.lenght`   | `str.length()` |   `<string>` |
-
-Returns the length of the string, in terms of bytes.</br>
-
-This is the number of actual bytes that conform the contents of the string, which is not necessarily equal to its storage capacity.</br>
-
-No parameters needed.</br>
-
+`std::string` 
 ---
+| `<string>` | Strings are objects that represent sequences of characters.|
+--|:--
+
+Example : `std::string str = argv[i];` 
+|--|
 </br>
 
-Function | Exemple | #include |
-|----------|----------|----------|
-| `std::toupper(c)`   | ` std::toupper(str[i])` |   `<string>` |
+`std::string.lenght` 
+---
+| `<string>` | Returns the length of the string, in terms of bytes.</br>|
+--|:--
 
-Converts parameter c to its uppercase equivalent if c is a lowercase letter and has an uppercase equivalent. </br>
+Example: `str.length()`
+|--|
+</br>
+
+`std::toupper(c)`
+---
+| `<string>` | Converts parameter c to its uppercase equivalent if c is a lowercase letter and has an uppercase equivalent. </br> |
+--|:--
+
+Example: ` std::toupper(str[i])`
+|--|
+</br>
+
 
 ---
 </br>
