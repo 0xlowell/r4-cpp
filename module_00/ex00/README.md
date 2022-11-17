@@ -3,9 +3,6 @@
 | [ex00 - megaphone](https://github.com/Elwoll/r4-cpp/tree/main/module_00/ex00) | Basics notions of cpp  | [module00](https://github.com/Elwoll/r4-cpp/tree/main/module_00) |
 
 Notions: 
-
-</br>
-
 ---
 | Function | Exemple | #include | 
 |----------|----------|----------|
