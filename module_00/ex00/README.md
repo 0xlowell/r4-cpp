@@ -7,9 +7,16 @@ Notions:
 </br>
 
 
-| Function | Exemple | Include |
-|----------|----------|----------|
-| `std::cout` | `std::cout << "Hello World" << std::endl;` | `<iostream>` |
+| Function | Exemple | #include | Notions |
+|----------|----------|----------|--|
+| `std::cout` | `std::cout << "Hello World" << std::endl;` | `<iostream>` |Object of class ostream that represents the standard output stream oriented to narrow characters (of type char). It corresponds to the C stream stdout.</br>
+
+The standard output stream is the default destination of characters determined by the environment. This destination may be shared with more standard objects (such as cerr or clog).</br>
+
+As an object of class ostream, characters can be written to it either as formatted data using the insertion operator (operator<<) or as unformatted data, using member functions such as write.</br>
+
+The object is declared in header `<iostream>` with external linkage and static duration: it lasts the entire duration of the program.|
+
 --- 
 </br>
 Object of class ostream that represents the standard output stream oriented to narrow characters (of type char). It corresponds to the C stream stdout.</br>
@@ -19,29 +26,41 @@ The standard output stream is the default destination of characters determined b
 As an object of class ostream, characters can be written to it either as formatted data using the insertion operator (operator<<) or as unformatted data, using member functions such as write.</br>
 
 The object is declared in header `<iostream>` with external linkage and static duration: it lasts the entire duration of the program.</br>
-
 </br>
 
-`std::endl` 
+| Function | Exemple | #include |
+|----------|----------|----------|
+| `std::endl`  | `std::cout << "Hello World" << std::endl;` |  `<ostream> <iostream>` |
 ---
-Exemple : `std::cout << "Hello World" << std::endl;` </br>
-#include `<ostream> <iostream>`</br>
 
-`std::string` 
+Inserts a new-line character and flushes the stream. </br>
+</br>
+
+ Function | Exemple | #include |
+|----------|----------|----------|
+| `std::string`   | `std::string str = argv[i];` |   `<string>` |
 ---
-(ex: `std::string str = argv[i];`) `#include <string>`
-</br>
-</br>
+
 Strings are objects that represent sequences of characters.
 </br>
 
-std::string.lenght() (ex: `str.length()`)  
+Function | Exemple | #include |
+|----------|----------|----------|
+| `std::string.lenght`   | `str.length()` |   `<string>` |
 ---
-Returns the length of the string, in terms of bytes.
 
-This is the number of actual bytes that conform the contents of the string, which is not necessarily equal to its storage capacity.
+Returns the length of the string, in terms of bytes.</br>
 
-`size_t length() const;`
+This is the number of actual bytes that conform the contents of the string, which is not necessarily equal to its storage capacity.</br>
+
+No parameters needed.</br>
 </br>
 
-std::toupper(std::string str[i])
+
+Function | Exemple | #include |
+|----------|----------|----------|
+| `std::toupper(c)`   | ` std::toupper(str[i])` |   `<string>` |
+---
+Converts parameter c to its uppercase equivalent if c is a lowercase letter and has an uppercase equivalent. </br>
+
+
