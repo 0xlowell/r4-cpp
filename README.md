@@ -9,6 +9,8 @@
 
 infos
 
+| CPP exercices |     Notions    | CPP modules
+|----------|----------|----------|
 | [ex01 - phonebook](https://github.com/Elwoll/r4-cpp/tree/main/module_00/ex01) | Implement class | [module00](https://github.com/Elwoll/r4-cpp/tree/main/module_00) |
 
 
