@@ -15,10 +15,13 @@ Write class names in UpperCamelCase format (CPP is case sensitive)
 
 ⛔️ `*printf()`, `*alloc()`, `free()`
 
+Detailed README in ex0X folders
+
 # Modules & exercices
 
 | CPP exercices |     Notions    | CPP modules
 |----------|----------|----------|
 | [ex00 - megaphone](https://github.com/Elwoll/r4-cpp/tree/main/module_00/ex00) | Basics notions of cpp  | [module00](https://github.com/Elwoll/r4-cpp/tree/main/module_00) |
+| [ex01 - PhoneBook](https://github.com/Elwoll/r4-cpp/tree/main/module_00/ex01) | Implementing class, .hpp |  [module00](https://github.com/Elwoll/r4-cpp/tree/main/module_00) |
 
 
