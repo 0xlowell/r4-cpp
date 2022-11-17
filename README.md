@@ -7,6 +7,7 @@
 Compile your code with </br>
 <<<<<<< 290c1270c1dd317cd9e246225b7aaf2647eadbd1
 <<<<<<< 290c1270c1dd317cd9e246225b7aaf2647eadbd1
+<<<<<<< 290c1270c1dd317cd9e246225b7aaf2647eadbd1
 `c++` `-Wall -Wextra -Werror` `-std=c++98` `-pedantic` </br>
 Meaning of ->[-pedantic](https://stackoverflow.com/questions/2855121/what-is-the-purpose-of-using-pedantic-in-the-gcc-g-compiler)
 =======
@@ -14,6 +15,9 @@ Meaning of ->[-pedantic](https://stackoverflow.com/questions/2855121/what-is-the
 >>>>>>> Update README.md
 =======
 `c++` `-Wall -Wextra -Werror` `-std=c++98` `-pedantic`
+=======
+`c++` `-Wall -Wextra -Werror` `-std=c++98` `-pedantic` </br>
+>>>>>>> Update README.md
 Meaning of ->[-pedantic](https://stackoverflow.com/questions/2855121/what-is-the-purpose-of-using-pedantic-in-the-gcc-g-compiler)
 >>>>>>> Update README.md
 
