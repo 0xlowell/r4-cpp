@@ -29,7 +29,8 @@ The standard output stream is the default destination of characters determined b
 As an object of class ostream, characters can be written to it either as formatted data using the insertion operator (operator<<) or as unformatted data, using member functions such as write.
 
 The object is declared in header <iostream> with external linkage and static duration: it lasts the entire duration of the program.
-</br>
+
+  </br>
 `std::string` Strings are objects that represent sequences of characters.
 
 The standard string class provides support for such objects with an interface similar to that of a standard container of bytes, but adding features specifically designed to operate with strings of single-byte characters.
@@ -37,7 +38,8 @@ The standard string class provides support for such objects with an interface si
 The string class is an instantiation of the basic_string class template that uses char (i.e., bytes) as its character type, with its default char_traits and allocator types (see basic_string for more info on the template).
 
 Note that this class handles bytes independently of the encoding used: If used to handle sequences of multi-byte or variable-length characters (such as UTF-8), all members of this class (such as length or size), as well as its iterators, will still operate in terms of bytes (not actual encoded characters).
-</br>
+
+  </br>
 `size_t length() const;` (ex: `str.length()`) Return length of string
 Returns the length of the string, in terms of bytes.
 
@@ -46,6 +48,7 @@ This is the number of actual bytes that conform the contents of the string, whic
 Note that string objects handle bytes without knowledge of the encoding that may eventually be used to encode the characters it contains. Therefore, the value returned may not correspond to the actual number of encoded characters in sequences of multi-byte or variable-length characters (such as UTF-8).
 
 Both string::size and string::length are synonyms and return the exact same value.
+
 </br>
 
 | CPP exercices |     Notions    | CPP modules
