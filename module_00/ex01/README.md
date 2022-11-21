@@ -51,7 +51,9 @@ Finaly, declare `Contact()` (a constructor) and `~Contact()` (his destructor).
 
 ---
 
-####What is the difference between class and a constructor?!</br>
+|What is the difference between class and a constructor?!|
+|:--|
+
 In simple words a class is like a blueprint and defines the framework that other objects can inherit, a constructor is something that actually creates the object in the program whereas the class only gives the guidelines.
 The class is define in the `.hpp` and the constructor will be set in the `.cpp` as: </br>`Contact::Contact(void) : _iscontact(0) `</br>`{ return; }`</br>
 
