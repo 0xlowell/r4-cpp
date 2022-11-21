@@ -60,8 +60,6 @@ The class is define in the `.hpp` and the constructor will be set in the `.cpp` 
 Same thing with structures in C, </br>`.hpp`: `typedef struct s_contact` </br> 
  `.cpp` `t_contact contact;`  </br>
 
----
-
 |What is an Initializer List ?|
 |:--|
 
