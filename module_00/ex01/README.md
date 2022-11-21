@@ -65,7 +65,7 @@ Same thing with structures in C, </br>`.hpp`: `typedef struct s_contact` </br>
 
 `... : _iscontact(0)` </br>
 In this way, we set up an Initializer List, with `_iscontact` as a part of the `class Contact` to give it the value `0`.
-Look at [studies/Sample.cpp](https://github.com/Elwoll/r4-cpp/tree/main/studies/sample.cpp) directory for more examples.
+Look at [studies/Sample.cpp](https://github.com/Elwoll/r4-cpp/blob/main/studies/Sample.cpp) file for more details.
 
 
 
