@@ -64,7 +64,7 @@ Same thing with structures in C, </br>`.hpp`: `typedef struct s_contact` </br>
 |:--|
 
 `... : _iscontact(0)` </br>
-In this way, we set up an Initializer List, with `_iscontact` as a part of the `class Contact` to give it the value `0`.
+In this way, we set up an Initializer List, to give `_iscontact` the value `0`.</br>
 Look at [studies/Sample.cpp](https://github.com/Elwoll/r4-cpp/blob/main/studies/Sample.cpp) file for more details.
 
 
@@ -76,40 +76,72 @@ Look at [studies/Sample.cpp](https://github.com/Elwoll/r4-cpp/blob/main/studies/
 |Call in `Contact.cpp`|
 |:--|
 
-Return a pointer on private variable:</br>
-`std::string Contact::getFirstname(){`</br>
-`return (this->_firstname); }`</br>
+* As write above, we call `Contact::Contact(void)` and `Contact::~Contact` at first in the `.cpp`file, who just `return;`
+
+* Then, call `std::string Contact::getFirstname()`, it will return a pointer on private variable `_firstname`: </br>
+
+```C
+std::string Contact::getFirstname()
+{
+	return (this->_firstname);
+}
+```
+
+Same for every private variables on `class Contact`</br>
 	
-Called in `void PhoneBook::printContact(int i)`, like that:</br>
-`std::cout << std::endl << "First name:";`</br>
-`std::cout << this->contact[i].getFirstname() << std::endl;`</br>
+* Those fonctions will be called in `void PhoneBook::printContact(int i)`, like that:</br>
 
-`this->contact[i]`: a pointer to contact index (i is incremented in the main) where `contact[i]` is a `std::string` like `std::string _firstname`
+```CPP
+	std::cout << std::endl << "First name:";
+	std::cout << this->contact[i].getFirstname() << std::endl;
+```
 
+* `this->contact[i]`: a pointer to contact index (i is incremented in the main) where `contact[i]` is a `std::string` like `std::string _firstname`
+
+* Then, this fonction will set values gathered to assign them to each `_firstname` private variables.
+
+```C 
+void Contact::updateContact(std::string fn,
+				std::string ln,
+				std::string nn,
+				std::string pn,
+				std::string ds,
+				bool ic) :
+				_firstname(fn),
+				_lastname(ln),
+				_nickname(nn),
+				_phone_number(pn),
+				_darkest_secret(ds),
+				_iscontact(ic)
+{
+	return;
+}
+```
+
+|Declare in `public:` in `PhoneBook.hpp`|
+|:--|
+
+```C
+void	addContact(int) // will gather all informations entered though the terminal input
+void	printContact(int) // print all infos
+```
+
+Those two will get though the process end:</br> 
+`void PhoneBook::addContact(int i)` will get input with a `getLine`</br>
+`void	printContact(int)` will print all infos when called.
+
+|Declare in `private:` in `PhoneBook.hpp`|
+|:--|
+```C
+Contact contact[8]; // only 8 contacts possible for the exercice.
+```
+
+|Call in `PhoneBook.cpp`|
+|:--|
+
+With the pointer on `this->contact[i]`, every infos will be stored into a Contact class.  
+
+---
 
 SEARCH
 ---
-
----
-`updateContact` will be call in `void PhoneBook::addContact(int i)` in `Phonebook.cpp` </br>
-{</br>
-Declared: `std::string fn;`,... will store input gather with `std::getline(std::cin, fn);`</br>
-
-
-|Constructor version used:|  Constructor version used | Details
-:--|:--|:--
-| `();` | ***empty string constructor*** | Constructs an empty string, with a length of zero characters.|
-| `(const string& str);` | ***copy constructor*** | Constructs a copy of str. |
-| `(const string& str,` </br>`size_t pos,` `size_t len = npos)`| ***substring constructor***| Copies the portion of str that begins at the character position pos and spans len characters (or until the end of str, if either str is too short or if len is string::npos).|
-|`(const char* s);`| ***from c-string*** | Copies the null-terminated character sequence (C-string) pointed by s.|
-|`(const char* s, size_t n);`|***from buffer***|Copies the first n characters from the array of characters pointed by s.|
-||
-
-
-Examples:
---- 
-| fonctions | example |
-:--|:--
-`std::cout` | `std::cout << "Hello World" << std::endl;`              
-
-
