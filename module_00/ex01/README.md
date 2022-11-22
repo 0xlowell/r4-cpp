@@ -101,19 +101,20 @@ Same for every private variables on `class Contact`</br>
 * Then, this fonction will set values gathered to assign them to each `_firstname` private variables.
 
 ```C 
+
 void Contact::updateContact(std::string fn,
 				std::string ln,
 				std::string nn,
 				std::string pn,
 				std::string ds,
-				bool ic) :
-				_firstname(fn),
-				_lastname(ln),
-				_nickname(nn),
-				_phone_number(pn),
-				_darkest_secret(ds),
-				_iscontact(ic)
+				bool ic)
 {
+this->_firstname = fn;
+this->_lastname = ln;
+this->_nickname = nn;
+this->_phone_number = pn;
+this->_darkest_secret = ds;
+this->_iscontact = ic;
 	return;
 }
 ```
@@ -127,11 +128,15 @@ void	printContact(int) // print all infos
 ```
 
 Those two will get though the process end:</br> 
-`void PhoneBook::addContact(int i)` will get input with a `getLine`</br>
-`void	printContact(int)` will print all infos when called.
+* `void PhoneBook::addContact(int i)` will get input with a `getLine`</br>
+* `void	printContact(int)` will print all infos when called.</br>
+
+*`void printIndex();` will be used for the SEARCH operation.*
+
 
 |Declare in `private:` in `PhoneBook.hpp`|
 |:--|
+
 ```C
 Contact contact[8]; // only 8 contacts possible for the exercice.
 ```
@@ -139,9 +144,49 @@ Contact contact[8]; // only 8 contacts possible for the exercice.
 |Call in `PhoneBook.cpp`|
 |:--|
 
-With the pointer on `this->contact[i]`, every infos will be stored into a Contact class.  
+Gather input with a `std::getline` :
+
+* `void PhoneBook::addContact(int i)` </br>
+
+```C
+std::string fn;
+
+std::cout << "First name:";
+	std::getline(std::cin, fn);
+	if (!std::cin) std::exit(0);
+```
+
+Then, with the pointer on `this->contact[i]` and the `updateContact(...)`:</br>
+every infos will be stored into a Contact class.
+
+
+* `void	printContact(int)` </br>
+
+```C
+std::cout << std::endl << "First name:";
+	std::cout << this->contact[i].getFirstname() << std::endl;
+```
+
 
 ---
 
 SEARCH
 ---
+
+Only the following fonctions are used to `SEARCH`, thanks to our contact[8]
+```C
+void	search(PhoneBook *pb)
+{
+	std::string line;
+	std::stringstream ss;
+	int i;
+
+	pb->printIndex();
+	std::cout << " Contact index ? :";
+	std::getline(std::cin, line);
+	i = line[0] - '0';
+	if (line[1] == 0 && i >= 0 && i <= 7)
+		pb->printContact(i);
+	else
+		std::cerr << line << " is an invalid index." << std::endl;
+}```
