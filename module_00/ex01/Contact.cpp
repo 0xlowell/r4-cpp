@@ -1,6 +1,5 @@
 
 #include "Contact.hpp"
-#include "PhoneBook.hpp"
 
 
 Contact::Contact(void) : _iscontact(0)
@@ -8,50 +7,46 @@ Contact::Contact(void) : _iscontact(0)
 	return;
 }
 
-Contact::~Contact()
-{
+Contact::~Contact() {
 	return;
 }
 
-std::string Contact::getFirstname()
-{
+std::string Contact::getFirstname() {
 	return (this->_firstname);
 }
 
-std::string Contact::getLastname()
-{
+std::string Contact::getLastname() {
 	return (this->_lastname);
 }
 
-std::string Contact::getNickname()
-{
+std::string Contact::getNickname() {
 	return (this->_nickname);
 }
 
-std::string Contact::getPhoneNumber()
-{
+std::string Contact::getPhoneNumber() {
 	return (this->_phone_number);
 }
 
-std::string Contact::getDarkestSecret()
-{
+std::string Contact::getDarkestSecret() {
 	return (this->_darkest_secret);
 }
 
-bool Contact::getContact()
-{
+bool Contact::getContact() {
 	return (this->_iscontact);
 }
-//this-> is a pointer in cpp
-void Contact::updateContact(std::string _firstname, std::string _lastname,
-							std::string _nickname, std::string _phone_number,
-							std::string _darkest_secret, bool _iscontact)
-{
-	this->_firstname = _firstname; // this->_firstname is a pointer to _firstname;
-	this->_lastname = _lastname;
-	this->_nickname = _nickname;
-	this->_phone_number = _phone_number;
-	this->_darkest_secret = _darkest_secret;
-	this->_iscontact = _iscontact;
-}
 
+void Contact::updateContact(std::string fn,
+							std::string ln,
+							std::string nn,
+							std::string pn,
+							std::string ds,
+							bool ic)
+{
+							this->_firstname = fn;
+							this->_lastname = ln;
+							this->_nickname = nn;
+							this->_phone_number = pn;
+							this->_darkest_secret = ds;
+							this->_iscontact = ic;
+	return;
+}

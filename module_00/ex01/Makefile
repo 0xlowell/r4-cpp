@@ -1,53 +1,25 @@
-#_______________ SRCS
-
-SRCS_DIR	= .
-SRCS_FILES	= main.cpp phoneBook.cpp contact.cpp
-SRCS		= ${patsubst %, ${SRCS_DIR}%, ${SRCS_FILES}}
-
-#_______________ OBJS
-
-O_DIR           = ./objs/
-OBJS_FILES		:= ${SRCS_FILES:.cpp=.o}
-OBJS			:= ${patsubst %, ${O_DIR}%, ${OBJS_FILES}}
-
-#_______________ RULES
-
-NAME			= phoneBook
-CC				= c++
-MKDIR           = mkdir
-RM              = rm -rf
-CPP_FLAGS		= -Wall -Wextra -Werror -std=c++98 -pedantic
 
 
+CFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
+CC     = c++ $(CFLAGS)
+OBJ    = PhoneBook.o Contact.o main.o
+NAME   = phonebook
+LIB = -ledit
 
-#_______________ COMMANDS
+.cpp.o:
+	$(CC) -c $< -o $@
 
-all:			${NAME}
+$(NAME): $(OBJ)
+	$(CC) -o $(NAME) $(OBJ) $(LIB)
 
-${NAME}:		${O_DIR} ${OBJS}
-				@printf "all \n"
-				@${CC} ${CPP_FLAGS} -o ${NAME} ${OBJS}
+all: $(NAME)
 
-${O_DIR}:
-				@${MKDIR} ${O_DIR}
+clean:
+	$(RM) $(OBJ)
 
-${O_DIR}%.o:%.cpp
-				@${CC} ${CPP_FLAGS} -o $@ -c $<
-				@printf "☎️ PhoneBook ☎️\n"
-				@printf "Use only ADD, SEARCH, EXIT\n"
-				@printf "ADD: to save a new contact (8 contacts max)\n"
-				@printf "SEARCH: to display a specific contact\n"
-				@printf "EXIT: to exit program\n"
+fclean: clean
+	$(RM) $(NAME)
 
-clean :
-				@${RM} ${O_DIR}
-				@printf "clean \n"
+re: fclean all
 
-fclean :
-				@${RM} ${O_DIR}
-				@${RM} ${NAME}
-				@printf "full clean \n"
-
-re : 			fclean all
-
-.PHONY : all clean fclean re norm
+.PHONY: all clean fclean re

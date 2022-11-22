@@ -26,7 +26,6 @@ OBJS			:= ${patsubst %, ${O_DIR}%, ${OBJS_FILES}}
 
 NAME			= megaphone
 CC				= c++
-AR              = ar rcs
 MKDIR           = mkdir
 RM              = rm -rf
 CPP_FLAGS		= -Wall -Wextra -Werror -std=c++98 -pedantic
@@ -39,7 +38,7 @@ all:			${NAME}
 
 ${NAME}:		${O_DIR} ${OBJS}
 				@printf "\n"
-				@printf "${GREEN} Compiled ${NAME} .o's${RESET}\n"
+				@printf " Compiled ${NAME}\n"
 				@${CC} ${CPP_FLAGS} -o ${NAME} ${OBJS}
 
 ${O_DIR}:

@@ -5,7 +5,8 @@
 #include "Sample.h"
 
 // Simple assignement
-Sample1::Sample1(char p1, char p2, int p3) {
+Sample1::Sample1(char p1, char p2, int p3)
+{
 	std::cout << "Constructor called" << std::endl;
 	this->a1 = p1
 	std::cout << "this->a1 = " << this->a1 << std::endl;
@@ -22,7 +23,8 @@ Sample1::Sample1(char p1, char p2, int p3) {
  */
 
 // Initialisation list
-Sample2::Sample2(char p1, char p2, int p3) : a1(p1), a2(p2), a3(p3) {
+Sample2::Sample2(char p1, char p2, int p3) : a1(p1), a2(p2), a3(p3)
+{
 	std::cout << "Constructor called" << std::endl;
 	std::cout << "this->a1 = " << this->a1 << std::endl;
 	std::cout << "this->a2 = " << this->a2 << std::endl;

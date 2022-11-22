@@ -5,13 +5,10 @@
 #include "PhoneBook.hpp"
 #include "Contact.hpp"
 #include <iostream>
-#include <string>
-#include <sstream>
 
 void	search(PhoneBook *pb)
 {
 	std::string line;
-	std::stringstream ss;
 	int i;
 
 	pb->printIndex();
@@ -28,19 +25,20 @@ void	search(PhoneBook *pb)
 int main(int ac, char **av)
 {
 	std::string	line;
-	phoneBook	pb;
+	PhoneBook	pb;
 	int 		i;
 
 	(void) av;
 
 	if (ac != 1){ // Protect if ./PhoneBook is launch with an argument
-		std::cout << "Launch ./PhoneBook without arguments\n" << endl;
+		std::cout << "Launch ./PhoneBook without arguments\n" << std::endl;
 		std::exit(0);
 	}
+	std::cout << "Use 'ADD', 'SEARCH' or 'EXIT'" << std::endl;
 	std::cout << "> ";
 	std::getline(std::cin, line); // Get first input line
 	i = 0;
-	while (std:cin)
+	while (std::cin)
 	{
 		if (line.compare("ADD") == 0)
 		{

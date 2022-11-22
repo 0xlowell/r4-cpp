@@ -4,15 +4,16 @@
 
 #include <string>
 
-class Contact // like a structure in C but more flexible, fonctions could be declared in class
+class Contact
 {
 
-private: // private variables used
-	std::string firstName;
-	std::string lastName;
-	std::string nickName;
-	std::string phoneNumber;
-	std::string darkestSecret;
+private:
+	std::string _firstname;
+	std::string _lastname;
+	std::string _nickname;
+	std::string _phone_number;
+	std::string _darkest_secret;
+	bool _iscontact;
 
 public:
 	std::string getFirstname(void);
@@ -34,7 +35,7 @@ public:
 					   std::string _darkest_secret,
 					   bool _iscontact);
 	Contact();
-	~Contact(void); // ~is a destroyer of Contact, at std::exit() it will erase and flush all data in the class
+	~Contact(void);
 };
 
 #endif

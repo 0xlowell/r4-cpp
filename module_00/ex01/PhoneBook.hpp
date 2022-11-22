@@ -6,8 +6,12 @@
 class PhoneBook
 {
 public:
+
 	void addContact(int);
-	void printContact(void);
+
+	void printContact(int i);
+
+	void printIndex();
 
 	PhoneBook(void);
 
