@@ -1,25 +1,39 @@
 | CPP exercices |     Notions    | CPP modules |
 |----------|----------|----------|
-| [ex01 - PhoneBook](https://github.com/Elwoll/r4-cpp/tree/main/module_00/ex01) | Basics notions of cpp  | [module00](https://github.com/Elwoll/r4-cpp/tree/main/module_00) |
+| [ex01 - PhoneBook](https://github.com/Elwoll/r4-cpp/tree/main/module_00/ex01) | Start using class | [module00](https://github.com/Elwoll/r4-cpp/tree/main/module_00) |
 
-Notions: 
+
+My Awesome PhoneBook
 ---
+```
+"Write a program that behaves like a crappy awesome phonebook software !"`
 
-|fonctions|include|notions|
-:--|:--|:--
-|`std::string` | `<iostream>` `<string>`| Standard output stream oriented to narrow characters (of type char). It corresponds to the C stream stdout. |
-|`std::getline`|
+Class PhoneBook: with an array of 8 contacts max. (9th contact will overwrite the first one)
+
+Class Contact: the phonebook contact
+
+In your code, the phonebook must be instantiated as an instance of the PhoneBook
+class. Same thing for the contacts. Each one of them must be instantiated as an instance
+of the Contact class. You’re free to design the classes as you like but keep in mind that
+anything that will always be used inside a class is private, and that anything that can be
+used outside a class is public. </br>
+On program start-up, the phonebook is empty and the user is prompted to enter one
+of three commands. The program only accepts ADD, SEARCH and EXIT.
+
+```
 
 
 
 
-|.cpp| .hpp  | descriptions |
-|:--|:--|:--
-|`Contact::Contact(void)`| `class Contact` `public:`| Constructor: Class instance by `class Contact`, and set `bool _iscontact` to `0` like this : `Contact::Contact(void) : _iscontact(0)` |
-|`Contact::~Contact()`| `class Contact` `public:`| Destroyer: with the `~`
-
-ADD
+ADD: save a new contact
 ---
+```
+* If the user enters this command, they are prompted to input the information
+of the new contact one field at a time. Once all the fields have been completed,
+add the contact to the phonebook.
+* The contact fields are: first name, last name, nickname, phone number, and
+darkest secret. A saved contact can’t have empty fields.
+```
 
 |Declare in `private:` in `Contact.hpp`|
 |:--|
@@ -172,13 +186,25 @@ std::cout << std::endl << "First name:";
 
 SEARCH
 ---
+```
+SEARCH: display a specific contact
+◦ Display the saved contacts as a list of 4 columns: index, first name, last
+name and nickname.
+◦ Each column must be 10 characters wide. A pipe character (’|’) separates
+them. The text must be right-aligned. If the text is longer than the column,
+it must be truncated and the last displayable character must be replaced by a
+dot (’.’).
+◦ Then, prompt the user again for the index of the entry to display. If the index
+is out of range or wrong, define a relevant behavior. Otherwise, display the
+contact information, one field per line.
+```
+
 
 Only the following fonctions are used to `SEARCH`, thanks to our contact[8]
 ```C
 void	search(PhoneBook *pb)
 {
 	std::string line;
-	std::stringstream ss;
 	int i;
 
 	pb->printIndex();
@@ -189,4 +215,28 @@ void	search(PhoneBook *pb)
 		pb->printContact(i);
 	else
 		std::cerr << line << " is an invalid index." << std::endl;
-}```
+}
+```
+EXIT
+---
+```
+◦ The program quits and the contacts are lost forever!
+```
+Made with:
+```C
+else if (line.compare("EXIT") == 0)
+	std::exit(0);
+```
+
+
+Notions: 
+---
+
+|fonctions|.include |notions|
+--:|:--|:--
+|`std::string` | `<iostream>` `<string>`| Standard output stream oriented to narrow characters (of type char). It corresponds to the C stream stdout. |
+|`std::getline(istream& is, string& str);`| `<string>`| Extracts characters from is and stores them into str |
+|`std::cerr`|`<iostream>`|The standard error stream is a destination of characters determined by the environment. |
+|`std::string::length`| `string`|Returns the length of the string, in terms of bytes.|
+
+
