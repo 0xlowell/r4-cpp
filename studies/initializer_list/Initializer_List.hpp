@@ -5,11 +5,7 @@
 #ifndef R4_CPP_SAMPLE_H
 #define R4_CPP_SAMPLE_H
 
-/*
- * this-> est un pointeur d'instance
- */
-
-
+#include <iostream>
 
 class Sample1 {
 
@@ -19,6 +15,7 @@ public:
 	int	a3;
 
 	Sample1(char p1, char p2, int p3);
+	~Sample1();
 };
 
 class Sample2 {
@@ -29,6 +26,7 @@ public:
 	int	a3;
 
 	Sample2(char p1, char p2, int p3);
+	~Sample2();
 };
 
 
