@@ -1,11 +1,9 @@
 //
 // Created by Lowell Zima on 11/22/22.
 //
-
 #include "Zombie.hpp"
 
-int	main()
+Zombie* newZombie(std::string name)
 {
-	Zombie();
-	~Zombie();
+	return (new Zombie(name));
 }

@@ -6,18 +6,22 @@
 #define R4_CPP_ZOMBIE_H
 
 #include <iostream>
+#include <new>
 
 class Zombie {
 private:
 	std::string _name;
 
 public:
-	void announce(void);
-	Zombie* newZombie(std::string _name);
 
-	Zombie(void);
+	void announce(void);
+
+	Zombie(std::string name);
 	~Zombie(void);
 };
 
+Zombie* newZombie( std::string name );
+
+void randomChump( std::string name );
 
 #endif //R4_CPP_ZOMBIE_H

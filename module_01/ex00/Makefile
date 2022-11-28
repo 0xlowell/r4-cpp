@@ -2,7 +2,7 @@
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
 CC     = c++ $(CFLAGS)
-OBJ    = Zombie.o main.o
+OBJ    = Zombie.o newZombie.o randomChump.o main.o
 NAME   = Zombieland
 LIB = -ledit
 
