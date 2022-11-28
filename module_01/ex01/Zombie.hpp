@@ -7,6 +7,9 @@
 
 #include <iostream>
 #include <new>
+#include <string>
+#include <cstdlib>
+
 
 class Zombie {
 private:
@@ -14,14 +17,16 @@ private:
 
 public:
 
-	void announce(void);
+	Zombie(); // constructor
+	~Zombie( void ); // destructor
 
-	Zombie(std::string name);
-	~Zombie(void);
+	Zombie( std::string name ); // class
+
+	void setName( std::string name );
+	void announce( void ); // calling
+ // access private _name
 };
 
-Zombie* newZombie( std::string name );
-
-void randomChump( std::string name );
+Zombie* zombieHorde( int nbr, std::string name );
 
 #endif //R4_CPP_ZOMBIE_H

@@ -2,8 +2,8 @@
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
 CC     = c++ $(CFLAGS)
-OBJ    = Zombie.o zombieHorde.o main.o
-NAME   = zombieHorde
+OBJ    = main.o
+NAME   = brain
 LIB = -ledit
 
 .cpp.o:
