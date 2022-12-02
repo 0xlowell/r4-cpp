@@ -1,10 +1,8 @@
-| CPP exercices |     Notions    | CPP modules |
-|----------|----------|----------|
-| [ex01 - PhoneBook](https://github.com/Elwoll/r4-cpp/tree/main/module_00/ex01) | Start using class | [module00](https://github.com/Elwoll/r4-cpp/tree/main/module_00) |
+
+## m00->ex01 - PhoneBook
 
 
-My Awesome PhoneBook
----
+### My Awesome PhoneBook
 ```
 "Write a program that behaves like a crappy awesome phonebook software !"`
 
@@ -22,10 +20,7 @@ of three commands. The program only accepts ADD, SEARCH and EXIT.
 
 ```
 
-
-
-
-ADD: save a new contact
+### ADD: save a new contact
 ---
 ```
 * If the user enters this command, they are prompted to input the information
@@ -184,7 +179,7 @@ std::cout << std::endl << "First name:";
 
 ---
 
-SEARCH
+### SEARCH: display a specific contact
 ---
 ```
 SEARCH: display a specific contact
@@ -217,7 +212,7 @@ void	search(PhoneBook *pb)
 		std::cerr << line << " is an invalid index." << std::endl;
 }
 ```
-EXIT
+### EXIT: bye bye
 ---
 ```
 ◦ The program quits and the contacts are lost forever!
@@ -229,7 +224,7 @@ else if (line.compare("EXIT") == 0)
 ```
 
 
-Notions: 
+### Notions resume: PhoneBook
 ---
 
 |fonctions|.include |notions|
@@ -238,5 +233,4 @@ Notions:
 |`std::getline(istream& is, string& str);`| `<string>`| Extracts characters from is and stores them into str |
 |`std::cerr`|`<iostream>`|The standard error stream is a destination of characters determined by the environment. |
 |`std::string::length`| `string`|Returns the length of the string, in terms of bytes.|
-
 
