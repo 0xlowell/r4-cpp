@@ -1,8 +1,6 @@
 # r4-cpp
 
 All details in the [Wiki](https://github.com/Elwoll/r4-cpp/wiki) page of the project.
-Each module as his own README.md
-
 # Links to exercices
 
 | **Module 00** | Notions | Status |
