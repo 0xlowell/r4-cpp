@@ -140,4 +140,51 @@ Destructor: Delete Zombie: Bobette
 Destructor: Delete Zombie: Bobette
 Destructor: Delete Zombie: Bobette
 ```
+In my files, you will be able to set name and number in the process.
+
+# m01-ex02 - HI THIS IS BRAIN
+
+This next exercise is super simple, it only aims to differentiate between pointers and references.
+
+```CPP
+
+int main()
+{
+	std::string str = "HI THIS IS BRAIN"; //A string variable initialized to "HI THIS IS BRAIN".
+
+	std::string *strPTR = &str;//stringPTR: A pointer to the string.
+
+	std::string &strREF = str;//stringREF: A reference to the string.
+
+	std::cout << "The memory address of the string variable:\t&str = "; 	//Output: 0x7ffeeba33938
+	std::cout << &str << std::endl;
+
+	std::cout << "The memory address held by strPTR:\t\tstrPTR = ";		//Output: 0x7ffeeba33938
+	std::cout << strPTR << std::endl;
+
+	std::cout << "The memory address held by strREF:\t\t&strREF = ";	//Output: 0x7ffeeba33938
+	std::cout << &strREF << std::endl;
+
+	std::cout << "The value of the string variable:\t\tstr = ";		//Output: HI THIS IS BRAIN
+	std::cout << str << std::endl;
+
+	std::cout << "The value pointed to by strPTR:\t\t\t*strPTR = ";		//Output: HI THIS IS BRAIN
+	std::cout << *strPTR << std::endl;
+
+	std::cout << "The value pointed to strREF:\t\t\tstrREF =";		//Output: HI THIS IS BRAIN
+	std::cout << strREF << std::endl;
+}
+```
+
+# m01-ex03 - Unnecessary violence
+
+This one extends the concepts of references and pointers from the previous exercise, creating two types of humans in two classes that can attack each other with different weapons.
+
+*From subject:*
+```
+In which case do you think it would be best to use a pointer to Weapon? 
+And a reference to Weapon? 
+Why? 
+Think about it before starting this exercise.
+```
 
