@@ -1,4 +1,14 @@
+# Table of contents:
+
+* Take me to [m01->ex00 - BraiiiiiiinnnzzzZ](#m01->ex00)
+* Take me to [m01->ex01 -  Moar brainz!](#m01->ex01)
+* Take me to [m01-ex02 - HI THIS IS BRAIN](#m01->ex02)
+* Take me to [m01-ex03 - Unnecessary violence](#m01->ex03)
+
+
+<a name="m01->ex00"> </a>
 # m01->ex00 - BraiiiiiiinnnzzzZ
+
 
 This first exercise asks us to simply create a bunch of classes with basic methods we will use in future exercises in the module. We must have two ways of allocating instances of the class: either on the stack or on the heap, and free the allocated space at the right time.</br>
 [More infos on Stack vs Heap Memory Allocation here](https://www.geeksforgeeks.org/stack-vs-heap-memory-allocation/)
@@ -87,7 +97,7 @@ Constructor Zombie
 Booby: BraiiiiiiinnnzzzZ...
 Destructor: Delete Zombie: Booby
 ```
-
+<a name="m01->ex01"> </a>
 # m01->ex01 -  Moar brainz!
 
 This second exercise consists of creating a method that will summon N zombies in one go, without naming each one of them. Then they all announce themselves and are properly destroyed.
@@ -141,7 +151,7 @@ Destructor: Delete Zombie: Bobette
 Destructor: Delete Zombie: Bobette
 ```
 In my files, you will be able to set name and number in the process.
-
+<a name="m01->ex02"> </a>
 # m01-ex02 - HI THIS IS BRAIN
 
 This next exercise is super simple, it only aims to differentiate between pointers and references.
@@ -175,10 +185,39 @@ int main()
 	std::cout << strREF << std::endl;
 }
 ```
-
+<a name="m01->ex03"> </a>
 # m01-ex03 - Unnecessary violence
 
 This one extends the concepts of references and pointers from the previous exercise, creating two types of humans in two classes that can attack each other with different weapons.
+
+In the subject, this main is expected:
+
+```CPP
+int main() {
+
+	Weapon club = Weapon("crude spiked club"); //Object club from class Weapon
+	HumanA bob("Bob", club); //Object bob
+	bob.attack(); //attack() part of HumanA class
+	club.setType("some other type of club"); // setType part of Weapon class
+	bob.attack(); //attack part of HumanA class
+
+
+	Weapon club = Weapon("crude spiked club");
+	HumanB jim("Jim");
+	jim.setWeapon(club); //setWeapon() part of HumanB class
+	jim.attack();
+	club.setType("some other type of club");
+	jim.attack();
+}
+```
+
+**Output:**
+```
+Bob attacks with his crude spiked club
+Bob attacks with his some other type of club
+Jim attacks with his crude spiked club
+Jim attacks with his some other type of club
+```
 
 *From subject:*
 ```
@@ -187,4 +226,6 @@ And a reference to Weapon?
 Why? 
 Think about it before starting this exercise.
 ```
+
+
 
