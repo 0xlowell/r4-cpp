@@ -87,3 +87,57 @@ Constructor Zombie
 Booby: BraiiiiiiinnnzzzZ...
 Destructor: Delete Zombie: Booby
 ```
+
+# m01->ex01 -  Moar brainz!
+
+This second exercise consists of creating a method that will summon N zombies in one go, without naming each one of them. Then they all announce themselves and are properly destroyed.
+## Member fonction `zombieHorde`
+
+```CPP
+Zombie* zombieHorde( int nbr, std::string name )
+{
+	Zombie* z = new Zombie[nbr]; // z is a pointer for a tab of nbr
+
+	for (int i = 0; i < nbr; ++i) // So incrementation is possible
+		z[i].setName(name); // setName, fonction member of the class Zombie, can be accessed using the dot .
+	return (z);
+}
+```
+
+```CPP
+
+int	main()
+{
+	Zombie 		*horde_ptr;
+	int		nbr = 5;
+	std::string	name = "Bobette"
+
+	horde_ptr = zombieHorde(nbr, name); 
+
+	for (int i = 0; i < nbr; i++)
+		horde_ptr[i].announce();
+	delete[] horde_ptr; // to delete all Zombie *horde_ptr, delete[] can be use
+}
+```
+Here, if `delete[]` isn't use, destructor won't be able to erase.
+[More infos for delete[] here](https://en.cppreference.com/w/cpp/language/delete)
+
+**Output:**
+```
+Constructor Zombie
+Constructor Zombie
+Constructor Zombie
+Constructor Zombie
+Constructor Zombie
+Bobette: BraiiiiiiinnnzzzZ...
+Bobette: BraiiiiiiinnnzzzZ...
+Bobette: BraiiiiiiinnnzzzZ...
+Bobette: BraiiiiiiinnnzzzZ...
+Bobette: BraiiiiiiinnnzzzZ...
+Destructor: Delete Zombie: Bobette
+Destructor: Delete Zombie: Bobette
+Destructor: Delete Zombie: Bobette
+Destructor: Delete Zombie: Bobette
+Destructor: Delete Zombie: Bobette
+```
+
