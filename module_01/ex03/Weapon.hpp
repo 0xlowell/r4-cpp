@@ -8,14 +8,18 @@
 
 class Weapon {
 private:
-	std::string _type;
+
+	std::string _name;
 
 public:
-	Weapon(std::string type);
+	Weapon(std::string name); 	//Weapon club = Weapon("crude spiked club");
+	Weapon();
 	~Weapon();
 
-	const std::string& getType() ;
-	void setType(std::string type);
+	// club.setType("some other type of club");
+	void	setType(std::string);
+	//
+	const std::string& getType(void);
 };
 
 #endif //R4_CPP_WEAPON_H

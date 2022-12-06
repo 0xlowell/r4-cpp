@@ -4,7 +4,7 @@
 
 #include "HumanA.hpp"
 
-HumanA::HumanA(std::string n, Weapon &wp): _name(n) weapon(wp) {
+HumanA::HumanA(std::string n, Weapon &wp): _name(n), _weapon(wp) {
 	return ;
 }
 
@@ -13,5 +13,5 @@ HumanA::~HumanA() {
 }
 
 void HumanA::attack(){
-	std::cout << this->_name << " attacks with his " << this->_weapon.getType() << std::endl;
+	std::cout << this->_name << " attacks with his " << _weapon.getType() << std::endl;
 }

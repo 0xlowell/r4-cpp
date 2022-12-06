@@ -9,16 +9,16 @@
 int main()
 {
 	{
-		Weapon club = Weapon("crude spiked club");
-		HumanA bob("Bob", club);
-		bob.attack();
-		club.setType("some other type of club");
-		bob.attack();
+		Weapon club = Weapon("crude spiked club"); //Object club from class Weapon
+		HumanA bob("Bob", club); //Object bob
+		bob.attack(); //attack() part of HumanA class
+		club.setType("some other type of club"); // setType part of Weapon class
+		bob.attack(); //attack part of HumanA class
 	}
 	{
 		Weapon club = Weapon("crude spiked club");
 		HumanB jim("Jim");
-		jim.setWeapon(club);
+		jim.setWeapon(club); //setWeapon() part of HumanB class
 		jim.attack();
 		club.setType("some other type of club");
 		jim.attack();
