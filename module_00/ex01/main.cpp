@@ -34,7 +34,7 @@ int main(int ac, char **av)
 		std::cout << "Launch ./PhoneBook without arguments\n" << std::endl;
 		std::exit(0);
 	}
-	std::cout << "Use 'ADD', 'SEARCH' or 'EXIT'" << std::endl;
+	std::cout << "Use only 'ADD', to search, only 'SEARCH' or 'EXIT' to quit" << std::endl;
 	std::cout << "> ";
 	std::getline(std::cin, line); // Get first input line
 	i = 0;
