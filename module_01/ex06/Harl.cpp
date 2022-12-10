@@ -24,29 +24,42 @@ Harl::~Harl() {
 }
 
 void Harl::debug( void ) {
-	std::cout << "WESH: Debug ALORS" << std::endl;
+	std::cout << "[DEBUG]: WESH le Debug" << std::endl;
 }
 
 void Harl::info( void ) {
-	std::cout << "WESH: Info ALORS" << std::endl;
+	std::cout << "[INFO]: WESH l'Info" << std::endl;
 }
 
 void Harl::warning( void ) {
-	std::cout << "WESH: Warning ALORS" << std::endl;
+	std::cout << "[WARNING]: WESH le Warning" << std::endl;
 }
 
 void Harl::error( void ) {
-	std::cout << "WESH: Error ALORS" << std::endl;
+	std::cout << "[ERROR] WESH l'Error" << std::endl;
 }
 
 void Harl::complain( std::string level )
 {
-	for (int i = 0; i < 4; i++)
-	{
-		if (_call[i].logname.compare(level) == 0 )
-			return (this->*(_call[i].fn))();
+	int logindex = -1;
+
+	for (int i = 0; i < 4; i++) {
+		if (_call[i].logname == level) {
+			logindex = i;
+			break;
+		}
 	}
-	std::cout << "OTHER: WESHing stuff around... ALORS !" << std::endl;
+	switch (logindex) {
+		case 0:
+			(this->*(_call[0].fn))();
+		case 1:
+			(this->*(_call[1].fn))();
+		case 2:
+			(this->*(_call[2].fn))();
+		case 3:
+			(this->*(_call[3].fn))();
+			break;
+		default:
+			std::cout << "Probably WESHing stuff around... !" << std::endl;
+	}
 }
-
-

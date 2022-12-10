@@ -13,7 +13,7 @@ class Harl;
 typedef struct s_log
 {
 	std::string logname;
-	void (Harl::*fn)( void );
+	void (Harl::*fn)( void ); //fn pointer sur fonction de la classe Harl qui prend un Harl et retourne un Harl
 } t_log;
 
 class Harl {
