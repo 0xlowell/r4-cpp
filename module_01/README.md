@@ -394,7 +394,7 @@ void Harl::complain( std::string level )
 }
 ```
 
-<a name="m01-ex00"> </a>
+<a name="m01-ex06"> </a>
 # m01-ex06 - Harl Filter
 
 In this one, it's to learn how to use a `switch`
