@@ -5,7 +5,7 @@
 * Take me to [m01-ex02 | HI THIS IS BRAIN](#m01-ex02)
 * Take me to [m01-ex03 | Unnecessary violence](#m01-ex03)
 * Take me to [m01-ex04 | Sed](#m01-ex04)
-
+* Take me to [m01-ex05 | Harl](#m01-ex05)
 
 <a name="m01-ex00"> </a>
 # m01->ex00 - BraiiiiiiinnnzzzZ
@@ -333,3 +333,46 @@ buffer.insert(i, s2);
 */
 ```
 
+<a name="m01-ex05"> </a>
+# m01-ex05 - Harl
+
+How to implement a tab, containing pointer's fonctions, such as `_call[0].fn = &Harl::debug;`
+
+To simply, our tab will be 4 struct with a string variale `logname` and a proto of a pointer to a member fonction of `Harl` class: `void (Harl::*fn)( void );`
+And this tab, will also be a variable member of `Harl` class.
+
+Here, `_call[0].fn = &Harl::debug;` means : in our tab of struct `_call`, at 0, the `fn` fonction pointer refers to a fonction of `Harl` class: `Harl::debug`.
+
+To use it, with the right address:
+* `(this->*(_call[i].fn))();`
+Here, the first resolution will be `_call[i].fn`, it will select `Harl::debug`.
+* `(this->*(Harl::debug))();`
+Now we have `this` and `->*` to explain:
+* The `this` keyword refers to the current object, so `Harl`
+* `->*` is the pointer-to-member fonction
+
+Example: 
+```CPP
+class MyClass
+{
+public:
+    void myFunction() { std::cout << "Hello, World!" << std::endl; }
+
+    void callFunction(void (MyClass::*fn)())
+    {
+        (this->*fn)();
+    }
+};
+
+int main()
+{
+    MyClass obj;
+    obj.callFunction(&MyClass::myFunction);
+
+    return 0;
+}
+```
+
+In this example, the `callFunction` method takes a pointer to a member function of `MyClass` as its argument. Inside `callFunction`, the pointer is called using the `this->*fn` syntax. This will call the member function that was passed to `callFunction`, which in this case is `myFunction`. When run, this code will print `"Hello, World!"` to the console.
+
+It's worth noting that this syntax can be somewhat complex and is not commonly used in modern C++ programming. In most cases, it is better to use regular function pointers or, even better, to use modern C++ features such as lambdas or `std::function` to avoid the need for pointers to member functions altogether.
