@@ -1,6 +1,10 @@
 # r4-cpp
 
-All details in the [Wiki](https://github.com/Elwoll/r4-cpp/wiki) page of the project.
+## How to navigate into CPP introduction course from 42Lausanne:
+* in the [Wiki](https://github.com/Elwoll/r4-cpp/wiki) page, all notes and informations about CPP, mostly gather on internet, centralized here.</br>
+* in each Module page, README.md will introduce every exercices of the Module: explainations, keywords used and so on.</br>
+
+
 # Links to exercices
 
 | **Module 00** | Notions | Status |
