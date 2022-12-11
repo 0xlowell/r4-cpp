@@ -1,7 +1,7 @@
 # r4-cpp
 
 ## How to navigate into CPP introduction from 42Lausanne, use Wikipage as follow:
-* ["Gathering informations about CPP"](https://github.com/Elwoll/r4-cpp/wiki) page , there are all notes and informations about CPP, mostly gather on internet, centralized here.</br>
+* [Gathering informations about CPP](https://github.com/Elwoll/r4-cpp/wiki): there are all notes and informations about CPP, mostly gather on internet, centralized here.</br>
 * Module's exercices pages: Open the wiki module's page to see notes and explainations, then click on exercice project's page below. 
 * [studies folder](https://github.com/Elwoll/r4-cpp/tree/main/studies) is exercice's as side project, feel free to look at it, but mostly not commented.
 
