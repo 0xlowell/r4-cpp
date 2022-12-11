@@ -19,7 +19,7 @@ All details in the [Wiki](https://github.com/Elwoll/r4-cpp/wiki) page of the pro
 | [m01-ex03 - Unnecessary violence](https://github.com/Elwoll/r4-cpp/tree/main/module_01/ex03) | *In wich case, use pointer or reference*| ✅ |
 | [m01-ex04 - Sed](https://github.com/Elwoll/r4-cpp/tree/main/module_01/ex04) | *Files manipulation: replace content inside a file* | ✅ |
 | [m01-ex05 - Harl](https://github.com/Elwoll/r4-cpp/tree/main/module_01/ex05) | *Pointers on fonction* | ✅ |
-| [m01-ex06 - Harl](https://github.com/Elwoll/r4-cpp/tree/main/module_01/ex06) | *How to use a 'switch'* | ✅ |
+| [m01-ex06 - Harl Filter](https://github.com/Elwoll/r4-cpp/tree/main/module_01/ex06) | *How to use a 'switch'* | ✅ |
 
 
 [![lzima's 42 CPP Module 01 Score](https://badge42.vercel.app/api/v2/cl1nk4f8f004009lb75fyii0c/project/2900342)](https://github.com/JaeSeoKim/badge42)
