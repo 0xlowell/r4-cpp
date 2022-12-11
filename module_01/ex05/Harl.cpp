@@ -43,8 +43,11 @@ void Harl::complain( std::string level )
 {
 	for (int i = 0; i < 4; i++)
 	{
-		if (_call[i].logname.compare(level) == 0 )
-			return (this->*(_call[i].fn))();
+		if (_call[i].logname.compare(level) == 0 ) {
+			(this->*(_call[i].fn))();
+			return ;
+		}
+
 	}
 	std::cout << "OTHER: WESHing stuff around... ALORS !" << std::endl;
 }

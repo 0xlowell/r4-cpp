@@ -2,7 +2,7 @@
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
 CC     = c++ $(CFLAGS)
-OBJ    = main.o Harl.o
+OBJ    = main.o HarlFilter.o
 NAME   = HarlFilter
 LIB = -ledit
 

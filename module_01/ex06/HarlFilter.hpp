@@ -2,8 +2,8 @@
 // Created by Lowell Zima on 12/10/22.
 //
 
-#ifndef R4_CPP_HARL_H
-#define R4_CPP_HARL_H
+#ifndef R4_CPP_HARLFILTER_H
+#define R4_CPP_HARLFILTER_H
 
 #include <iostream>
 #include <string>
@@ -36,4 +36,4 @@ private:
 
 
 
-#endif //R4_CPP_HARL_H
+#endif //R4_CPP_HARLFILTER_H

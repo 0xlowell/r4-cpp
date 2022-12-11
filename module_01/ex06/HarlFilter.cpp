@@ -2,7 +2,7 @@
 // Created by Lowell Zima on 12/10/22.
 //
 
-#include "Harl.hpp"
+#include "HarlFilter.hpp"
 
 Harl::Harl()
 {
@@ -51,13 +51,13 @@ void Harl::complain( std::string level )
 	}
 	switch (logindex) {
 		case 0:
-			(this->*(_call[0].fn))();
+			(this->*(_call[0].fn))(); // &Harl::debug;
 		case 1:
-			(this->*(_call[1].fn))();
+			(this->*(_call[1].fn))(); // &Harl::info;
 		case 2:
-			(this->*(_call[2].fn))();
+			(this->*(_call[2].fn))(); // &Harl::warning;
 		case 3:
-			(this->*(_call[3].fn))();
+			(this->*(_call[3].fn))(); // &Harl::error;
 			break;
 		default:
 			std::cout << "Probably WESHing stuff around... !" << std::endl;

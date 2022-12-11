@@ -1,7 +1,7 @@
 //
 // Created by Lowell Zima on 12/10/22.
 //
-#include "Harl.hpp"
+#include "HarlFilter.hpp"
 
 
 int main(int ac, char **av)
@@ -17,8 +17,10 @@ int main(int ac, char **av)
 	std::string input;
 
 
-	std::cout << "Order of level: INFO, WARNING, ERROR, DEBUG " << std::endl;
+	std::cout << "(0) Level of Gravity: (1) ERROR + (2) WARNING + (3) INFO + (4) DEBUG" << std::endl;
 	std::getline(std::cin, input);
+	std::cout << std::endl;
 	Harl.complain(input);
+	std::cout << std::endl;
 	return(0);
 }

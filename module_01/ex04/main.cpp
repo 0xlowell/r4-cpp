@@ -4,7 +4,6 @@
 
 #include <iostream>
 #include <fstream>
-//#include <string>
 
 inline bool exists_test (const std::string& name) {
 	std::ifstream f(name.c_str());
@@ -22,20 +21,19 @@ void replace_str(std::string &buffer, std::string const &s1, std::string const &
 	while (true)
 	{
 		i = buffer.find(s1, i);
+		/*
+		 * find is a method of the std::string class that searches for the first
+		 * occurrence of a substring within a string and returns the index of the
+		 * first character of the found substring. If the substring is not found,
+		 * the find method returns a special value called npos, which is a static
+		 * member of the std::string class with the value std::string::npos
+		 */
 		if (i == std::string::npos)
-			/*
-			 * std::string::npos is a constant defined in the std::string class
-			 * that represents the maximum possible value for a std::string
-			 * object's length. It is typically used to indicate that a string
-			 * operation failed to find a match. For example, if you call the
-			 * std::string::find method and it returns std::string::npos, it means
-			 * that the search failed to find the specified substring in the string.
-			 */
 			break;
 
 		buffer.erase(i, s1.length());
 		/*
-		 * std::string::erase is a function in the C++ standard library that
+		 * std::string::erase
 		 * allows you to remove part of a string. It takes as arguments the index
 		 * of the character to start the removal from, and the number of characters
 		 * to remove.
@@ -46,14 +44,12 @@ void replace_str(std::string &buffer, std::string const &s1, std::string const &
 		 */
 		buffer.insert(i, s2);
 		/*
-		 * std::string::insert is a member function of the std::string class in the
-		 * C++ standard library. It inserts a specified number of copies of a given
+		 * std::string::insert inserts a specified number of copies of a given
 		 * string or character at a specified position in the string.
 		 */
 		i += s2.length();
 		/*
-		 * std::string::length is a member function of the std::string class in the
-		 * C++ standard library. It returns the length of a string, that is, the
+		 * std::string::length returns the length of a string, that is, the
 		 * number of characters in the string. It does not include the null terminator,
 		 * which marks the end of the string in C-style strings.
 		 */
