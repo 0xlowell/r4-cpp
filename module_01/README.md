@@ -6,6 +6,7 @@
 * Take me to [m01-ex03 | Unnecessary violence](#m01-ex03)
 * Take me to [m01-ex04 | Sed](#m01-ex04)
 * Take me to [m01-ex05 | Harl](#m01-ex05)
+* Take me to [m01-ex06 | Harl Filter](#m01-ex06)
 
 <a name="m01-ex00"> </a>
 # m01->ex00 - BraiiiiiiinnnzzzZ
@@ -349,9 +350,9 @@ Here, the first resolution will be `_call[i].fn`, it will select `Harl::debug`.
 * `(this->*(Harl::debug))();`
 Now we have `this` and `->*` to explain:
 * The `this` keyword refers to the current object, so `Harl`
-* `->*` is the pointer-to-member fonction
+* `->*` is the pointer-to-member fonction, define in class as `void (Harl::*fn)( void );`.
 
-Example: 
+In an another case:
 ```CPP
 class MyClass
 {
@@ -375,4 +376,71 @@ int main()
 
 In this example, the `callFunction` method takes a pointer to a member function of `MyClass` as its argument. Inside `callFunction`, the pointer is called using the `this->*fn` syntax. This will call the member function that was passed to `callFunction`, which in this case is `myFunction`. When run, this code will print `"Hello, World!"` to the console.
 
-It's worth noting that this syntax can be somewhat complex and is not commonly used in modern C++ programming. In most cases, it is better to use regular function pointers or, even better, to use modern C++ features such as lambdas or `std::function` to avoid the need for pointers to member functions altogether.
+*It's worth noting that this syntax can be somewhat complex and is not commonly used in modern C++ programming. In most cases, it is better to use regular function pointers or, even better, to use modern C++ features such as lambdas or `std::function` to avoid the need for pointers to member functions altogether.*
+
+Then, in this exercice:
+```CPP
+void Harl::complain( std::string level )
+{
+	for (int i = 0; i < 4; i++)
+	{
+		if (_call[i].logname.compare(level) == 0 ) {
+			(this->*(_call[i].fn))();
+			return ;
+		}
+
+	}
+	std::cout << "OTHER: WESHing stuff around... ALORS !" << std::endl;
+}
+```
+
+<a name="m01-ex00"> </a>
+# m01-ex06 - Harl Filter
+
+In this one, it's to learn how to use a `switch`
+```CPP
+
+void Harl::complain( std::string level )
+{
+	int logindex = -1;
+
+	for (int i = 0; i < 4; i++) {
+		if (_call[i].logname == level) {
+			logindex = i;
+			break;
+		}
+	}
+	switch (logindex) { 
+	/*
+	 * logindex will be equal to 0 to 3,
+	 * and, if logindex == 1, it will call case 0 and 1;
+		case 0:
+			(this->*(_call[0].fn))();
+		case 1:
+			(this->*(_call[1].fn))();
+		case 2:
+			(this->*(_call[2].fn))();
+		case 3:
+			(this->*(_call[3].fn))();
+			break; //otherwise, it will also print default.
+		default:
+			std::cout << "Probably WESHing stuff around... !" << std::endl;
+	}
+}
+```
+
+**Output:
+```
+Constructor called
+(0) Level: (1) ERROR + (2) WARNING + (3) INFO + (4) DEBUG
+DEBUG
+
+[DEBUG]: WESH le Debug
+[INFO]: WESH l'Info
+[WARNING]: WESH le Warning
+[ERROR] WESH l'Error
+
+Destructor Harl called
+```
+PS : there is no logic in content, sry...
+
