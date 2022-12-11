@@ -1,12 +1,13 @@
 # Table of contents:
 
-* Take me to [m01->ex00 - BraiiiiiiinnnzzzZ](#m01->ex00)
-* Take me to [m01->ex01 -  Moar brainz!](#m01->ex01)
-* Take me to [m01-ex02 - HI THIS IS BRAIN](#m01->ex02)
-* Take me to [m01-ex03 - Unnecessary violence](#m01->ex03)
+* Take me to [m01-ex00 | BraiiiiiiinnnzzzZ](#m01-ex00)
+* Take me to [m01-ex01 |  Moar brainz!](#m01-ex01)
+* Take me to [m01-ex02 | HI THIS IS BRAIN](#m01-ex02)
+* Take me to [m01-ex03 | Unnecessary violence](#m01-ex03)
+* Take me to [m01-ex04 | Sed](#m01-ex04)
 
 
-<a name="m01->ex00"> </a>
+<a name="m01-ex00"> </a>
 # m01->ex00 - BraiiiiiiinnnzzzZ
 
 
@@ -97,7 +98,7 @@ Constructor Zombie
 Booby: BraiiiiiiinnnzzzZ...
 Destructor: Delete Zombie: Booby
 ```
-<a name="m01->ex01"> </a>
+<a name="m01-ex01"> </a>
 # m01->ex01 -  Moar brainz!
 
 This second exercise consists of creating a method that will summon N zombies in one go, without naming each one of them. Then they all announce themselves and are properly destroyed.
@@ -151,7 +152,7 @@ Destructor: Delete Zombie: Bobette
 Destructor: Delete Zombie: Bobette
 ```
 In my files, you will be able to set name and number in the process.
-<a name="m01->ex02"> </a>
+<a name="m01-ex02"> </a>
 # m01-ex02 - HI THIS IS BRAIN
 
 This next exercise is super simple, it only aims to differentiate between pointers and references.
@@ -185,7 +186,7 @@ int main()
 	std::cout << strREF << std::endl;
 }
 ```
-<a name="m01->ex03"> </a>
+<a name="m01-ex03"> </a>
 # m01-ex03 - Unnecessary violence
 
 This one extends the concepts of references and pointers from the previous exercise, creating two types of humans in two classes that can attack each other with different weapons.
@@ -228,4 +229,107 @@ Think about it before starting this exercise.
 ```
 
 
+<a name="m01-ex04"> </a>
+# m01-ex04 - Sed
+[Sed ?](https://en.wikipedia.org/wiki/Sed)</br>
+Recode `replace` fonction to change all occurrences in one `x` file, save them into a `x.replace` file.
+Using stream fonctions, and string manipulations, such as:
+
+## `std::ifstream file(filename);`
+`std::ifstream` is a class in the C++ standard library that allows you to read from files. The file variable that you've declared is an object of this class, and the `(filename)` part after the class name is an argument passed to the constructor, which initializes the object by opening the file with the specified `filename` for reading.
+For example: 
+```CPP
+#include <fstream>
+#include <iostream>
+#include <string>
+
+int main() {
+  // Open the file "hello.txt" for reading.
+  std::ifstream file("hello.txt");
+
+  // Check if the file was opened successfully.
+  if (!file) {
+    std::cerr << "Error opening file!" << std::endl;
+    return 1;
+  }
+
+  // Read the file line by line.
+  std::string line;
+  while (std::getline(file, line)) {
+    std::cout << line << std::endl;
+  }
+
+  // Close the file.
+  file.close();
+
+  return 0;
+}
+```
+
+## `std::ofstream replace(filename + ".replace");`
+`std::ofstream` is a class in the C++ standard library that allows you to write to files. The replace variable that you've declared is an object of this class, and the `(filename + ".replace")` part after the class name is an argument passed to the constructor, which initializes the object by opening the file with the specified `filename` plus the `".replace"` suffix for writing.
+For example :
+```CPP
+#include <fstream>
+#include <iostream>
+#include <string>
+
+int main() {
+  // Open the file "hello.txt.replace" for writing.
+  std::ofstream replace("hello.txt.replace");
+
+  // Check if the file was opened successfully.
+  if (!replace) {
+    std::cerr << "Error opening file!" << std::endl;
+    return 1;
+  }
+
+  // Write to the file.
+  replace << "Hello, world!" << std::endl;
+
+  // Close the file.
+  replace.close();
+
+  return 0;
+}
+```
+
+## `find` `erase` `insert` string manipulation
+
+`find`
+```CPP
+i = buffer.find(s1, i);
+/*
+* find is a method of the std::string class that searches for the first
+* occurrence of a substring within a string and returns the index of the
+* first character of the found substring. If the substring is not found,
+* the find method returns a special value called npos, which is a static
+* member of the std::string class with the value std::string::npos
+*/
+if (i == std::string::npos)
+	break;
+```
+
+`erase`
+```CPP
+buffer.erase(i, s1.length());
+/*
+* std::string::erase
+* allows you to remove part of a string. It takes as arguments the index
+* of the character to start the removal from, and the number of characters
+* to remove.
+* The std::string::erase function can be used to remove characters from a
+* string, or to remove a substring by specifying the starting index and
+* the length of the substring to remove. It is often used in C++ programs
+* to manipulate strings.
+*/
+```
+`insert`
+```CPP
+buffer.insert(i, s2);
+/*
+* std::string::insert inserts a specified number of copies of a given
+* string or character at a specified position in the string.
+*/
+```
 
