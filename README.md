@@ -1,8 +1,13 @@
 # r4-cpp
 
-All details in the [Wiki](https://github.com/Elwoll/r4-cpp/wiki) page of the project.
-# Links to exercices
+## How to navigate into CPP introduction from 42Lausanne, use Wikipage as follow:
+* [Gathering informations about CPP](https://github.com/Elwoll/r4-cpp/wiki): there are all notes and informations about CPP, mostly gather on internet, centralized here.</br>
+* Module's exercices pages: Open the wiki module's page to see notes and explainations, then click on exercice project's page below. 
+* [studies folder](https://github.com/Elwoll/r4-cpp/tree/main/studies) is exercice's as side project, feel free to look at it, but mostly not commented.
 
+---
+
+## [Link to Wiki on Module 00](https://github.com/Elwoll/r4-cpp/wiki/Module-00)
 | **Module 00** | Notions | Status |
 |:--|:--|:--:|
 | [m00-ex00 - megaphone](https://github.com/Elwoll/r4-cpp/tree/main/module_00/ex00) | *Write a program to change lowercase into uppercase*  | ✅ |
@@ -11,6 +16,9 @@ All details in the [Wiki](https://github.com/Elwoll/r4-cpp/wiki) page of the pro
 [![lzima's 42 CPP Module 00 Score](https://badge42.vercel.app/api/v2/cl1nk4f8f004009lb75fyii0c/project/2774883)](https://github.com/JaeSeoKim/badge42)
 
 ---
+
+
+## [Link to Wiki on Module 00](https://github.com/Elwoll/r4-cpp/wiki/Module-00)
 | **Module 01** | Notions | Status |
 |:--|:--|:--:|
 | [m01-ex00 - BraiiiiiiinnnzzzZ](https://github.com/Elwoll/r4-cpp/tree/main/module_01/ex00) | *To determine in what case it’s better to allocate object on the stack or heap.* | ✅ |
