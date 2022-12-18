@@ -3,10 +3,9 @@
 //
 
 #ifndef R4_CPP_FIXED_H
-#define R4_CPP_FIXED_H
+# define R4_CPP_FIXED_H
 
-#include <iostream>
-
+# include <iostream>
 
 class Fixed {
 private:

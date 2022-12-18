@@ -175,3 +175,6 @@ a new object with the result of the operation.
 
 
 ChatGPT Dec 15 Version
+
+Initialisation list in `.hpp`, no need to write it in `.cpp`
+[Source](https://www.learncpp.com/cpp-tutorial/constructor-member-initializer-lists/)
