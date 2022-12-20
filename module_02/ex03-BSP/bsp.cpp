@@ -74,4 +74,5 @@ B(10,30)
 
  Source:
  https://www.geeksforgeeks.org/check-whether-a-given-point-lies-inside-a-triangle-or-not/
+ https://www.khanacademy.org/math/cc-sixth-grade-math/x0267d782:cc-6th-plane-figures/cc-6th-area-triangle/v/example-finding-area-of-triangle
  */

@@ -4,7 +4,7 @@
 
 #include "Fixed.hpp"
 
-Fixed::Fixed (): _value(0) {
+Fixed::Fixed (): _value(1) {
 	std::cout << "Default constructor called" << std::endl;
 }
 

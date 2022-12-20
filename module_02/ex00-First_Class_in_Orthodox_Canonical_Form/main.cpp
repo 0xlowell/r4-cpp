@@ -5,12 +5,12 @@
 #include "Fixed.hpp"
 
 int main() {
-	Fixed a;
-	Fixed b( a );
-	Fixed c;
+	Fixed a; // Constructor
+	Fixed b( a ); // Constructor copy
+	Fixed c; // Constructor
 
-	c = b;
-	std::cout << a.getRawBits() << std::endl;
+	c = b; // Copy assignement operator
+	std::cout << a.getRawBits() << std::endl; // returns the raw value of the fixed-point value.
 	std::cout << b.getRawBits() << std::endl;
 	std::cout << c.getRawBits() << std::endl;
 
