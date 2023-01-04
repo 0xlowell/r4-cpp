@@ -22,7 +22,7 @@ ScavTrap &ScavTrap::operator = (const ScavTrap &cpy) {
 
 void ScavTrap::attack(const std::string &target) {
 
-	if (this->_energy < 0) {
+	if (this->_energy < 0 || this->_hit < 0) {
 		std::cout << "No  ⚡️ energy left."
 				  << std::endl<< std::endl;
 	}
