@@ -3,7 +3,7 @@
 //
 
 #include "Bureaucrat.hpp"
-#include "Form.hpp"
+#include "AForm.hpp"
 
 Bureaucrat::Bureaucrat(std::string name, int grade) : _name(name), _grade(grade) {
 	GradeCheck();
@@ -51,9 +51,8 @@ void Bureaucrat::decrementGrade() {
 	std::cout << "decrementGrade: " << _grade << std::endl;
 }
 
-void Bureaucrat::signForm(Form &f) {
+void Bureaucrat::signForm(AForm &f) {
 	try {
-
 		f.Signature(*this);
 		std::cout << BOLD_G << _name << " signed " << f.getName() << RESET << std::endl;
 	}

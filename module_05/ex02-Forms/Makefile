@@ -3,7 +3,7 @@
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic -g3
 CC     = c++ $(CFLAGS)
 OBJ    = main.o Bureaucrat.o Form.o
-NAME   = Bureaucrat_with_Forms
+NAME   = Bureaucrat
 LIB = -ledit
 
 .cpp.o:

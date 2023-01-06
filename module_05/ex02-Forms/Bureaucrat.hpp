@@ -15,9 +15,9 @@
 
 
 #include <iostream>
-#include "Form.hpp"
+#include "AForm.hpp"
 
-class Form;
+class AForm;
 
 class Bureaucrat {
 public:
@@ -33,7 +33,7 @@ public:
 	void incrementGrade();
 	void decrementGrade();
 
-	void signForm(Form &f);
+	void signForm(AForm &f);
 
 private:
 	std::string _name;
