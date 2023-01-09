@@ -28,8 +28,8 @@ int main() {
 		// code that might throw Bureaucrat::GradeTooLowException
 		Bureaucrat 	low("low", 3);
 		std::cout << low.getGrade() << std::endl;
-		Form		form("A38", 1, 10);
-		low.signForm(form);
+		AForm		AForm("A38", 1, 10);
+		low.signForm(AForm);
 		std::cout << low << std::endl;
 	}
 	catch (std::exception& e) {

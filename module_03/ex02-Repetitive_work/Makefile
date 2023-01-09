@@ -2,8 +2,8 @@
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic -g3
 CC     = c++ $(CFLAGS)
-OBJ    = main.o ClapTrap.o ScavTrap.o
-NAME   = Serena
+OBJ    = main.o ClapTrap.o ScavTrap.o FragTrap.o
+NAME   = FragTrap
 LIB = -ledit
 
 .cpp.o:

@@ -5,11 +5,11 @@
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap(std::string name): _name(name), _hit(10), _energy(10), _attack_damage(0) {
-	std::cout << "Constructor for " << _name << std::endl << std::endl;
+	std::cout << "Constructor for ClapTrap " << _name << std::endl << std::endl;
 }
 
 ClapTrap::~ClapTrap() {
-	std::cout << "Destructor for " << _name << std::endl;
+	std::cout << "Destructor for ClapTrap " << _name << std::endl;
 }
 
 ClapTrap::ClapTrap( const ClapTrap &cpy ) {

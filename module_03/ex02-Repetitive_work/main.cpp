@@ -4,17 +4,14 @@
 
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 int main() {
-	ClapTrap bob("🧡 Bob");
-	ClapTrap bobette("💚 Bobette");
-	ScavTrap robot("🤖 ScavTrap Robot");
+//	ClapTrap bob("🧡 Bob");
+//	ClapTrap bobette("💚 Bobette");
+//	ScavTrap robot("🤖 ScavTrap Robot");
+	FragTrap f("FragTrap Robot");
 
-	std::cout << "______________________________________________________________________________________" << std::endl;
-	robot.attack("🧡 Bob");
-	std::cout << "______________________________________________________________________________________" << std::endl;
-	robot.takeDamage(20);
-	std::cout << "______________________________________________________________________________________" << std::endl;
-	robot.beRepaired(20);
-	std::cout << "______________________________________________________________________________________" << std::endl;
-	robot.guardGate();
+
+	f.highFivesGuys();
+
 }
