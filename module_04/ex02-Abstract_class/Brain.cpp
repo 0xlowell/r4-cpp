@@ -17,8 +17,19 @@ Brain::Brain ( const Brain &cpy ) {
 	*this = cpy;
 }
 
+
 Brain &Brain::operator = ( const Brain & cpy) {
+	std::cout << "Operator = Brain" << std::endl;
 	for (int i = 0; i < 100; i++)
-		this->ideas[i] = cpy.ideas[i];
+	{
+		if (i < 1) {
+			std::cout << "Copy _ideas[" << i << "] = "
+					  << _ideas[i] << " from cpy._ideas[" << i << "] = " << cpy._ideas[i] << std::endl << std::endl;
+			std::cout << " ; cpy Address " << cpy._ideas
+					  << " ; this Address " << this->_ideas << std::endl << std::endl;
+		}
+
+		this->_ideas[i] = cpy._ideas[i];
+	}
 	return (*this);
 }

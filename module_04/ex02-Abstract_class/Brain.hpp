@@ -16,7 +16,7 @@ public:
 	Brain &operator = ( const Brain &cpy);
 
 private:
-	std::string ideas[100];
+	std::string _ideas[100];
 };
 
 

@@ -14,9 +14,10 @@ public:
 	~Brain();
 	Brain ( const Brain &cpy);
 	Brain &operator = ( const Brain &cpy);
+	std::string getBrain();
 
 private:
-	std::string ideas[100];
+	std::string _ideas[100];
 };
 
 

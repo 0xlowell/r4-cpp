@@ -5,32 +5,42 @@
 #include "Dog.hpp"
 #include "Cat.hpp"
 
-int main()
-{
+int main() {
+	std::cout << "TEST From Eval test" << std::endl;
+	Dog d;
+	std::cout << "_ideas[0] = " << d.getBrainDog()->getBrain() << std::endl;
+	std::cout << "Address = " << d.getBrainDog() << std::endl;
 	{
-		const Dog *dog = new Dog();
-		const Cat *cat = new Cat();
-
-		delete dog;
-		delete cat;
+		std::cout << std::endl << "---------------------------" << std::endl;
+		Dog tmp(d);
+		std::cout << std::endl << "---------------------------" << std::endl;
 	}
-	std::cout << std::endl << "---------------------------" << std::endl;
-	{
-		const Animal* animal[10];
-
-		for (int i = 0; i < 10; i++)
-			if (i < (10/2))
-			{
-				std::cout << i << " 😸" << std::endl;
-				animal[i] = new Cat();
-			}
-			else {
-				std::cout << i << " 🐶" << std::endl;
-				animal[i] = new Dog();
-			}
-		for (int i = 0; i < 10; i++)
-			delete animal[i];
-	}
+//	std::cout << std::endl << "---------------------------" << std::endl;
+//	{
+//		const Dog *dog = new Dog();
+//		const Cat *cat = new Cat();
+//
+//		delete dog;
+//		delete cat;
+//	}
+//	std::cout << std::endl << "---------------------------" << std::endl;
+//	{
+//		const Animal* animal[10];
+//
+//		for (int i = 0; i < 10; i++)
+//			if (i < (10/2))
+//			{
+//				std::cout << i << " 😸" << std::endl;
+//				animal[i] = new Cat();
+//			}
+//			else {
+//				std::cout << i << " 🐶" << std::endl;
+//				animal[i] = new Dog();
+//			}
+//		for (int i = 0; i < 10; i++)
+//			delete animal[i];
+//	}
+//
 //	{
 //		std::cout << "BASIC tests: " << std::endl;
 //		const Animal* meta = new Animal();

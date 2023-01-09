@@ -17,15 +17,24 @@ Dog::~Dog() {
 }
 
 Dog::Dog ( const Dog &cpy ) {
+	std::cout << "Copy Constructor Dog " << std::endl;
 	*this = cpy;
 }
 
 Dog &Dog::operator = ( const Dog & cpy) {
 	this->type = cpy.type;
-	this->_brain = cpy._brain;
+//	if (this->_brain)
+//	delete this->_brain;
+	this->_brain = new Brain();
+	*(this->_brain) = *(cpy._brain);
 	return (*this);
 }
 
 void Dog::makeSound() const {
 	std::cout << "Woof!" << std::endl;
 }
+
+Brain *Dog::getBrainDog() {
+	return (this->_brain);
+}
+

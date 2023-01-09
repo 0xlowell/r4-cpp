@@ -10,6 +10,9 @@
 class Animal {
 public:
 
+	Animal();
+	Animal ( const Animal &cpy );
+	Animal &operator = (const Animal &cpy);
 	virtual ~Animal();
 	/*
 	 * The ~Animal() destructor is declared as virtual because
@@ -20,17 +23,12 @@ public:
 	 * leaks or other problems.
 	 */
 
-
-	virtual void makeSound() const;
+	virtual void makeSound() const = 0;
 
 	void setType(std::string type);
 	std::string getType() const;
 
 protected:
-	Animal();
-	Animal ( const Animal &cpy );
-	Animal &operator = (const Animal &cpy);
-
 	std::string type;
 
 };

@@ -12,7 +12,7 @@ int main()
 	{
 		std::cout << "RIGHT type test: " << std::endl;
 		const Animal* meta = new Animal();
-		const Animal* dog = new Dog();
+		const Dog* dog = new Dog();
 		const Animal* cat = new Cat();
 
 		std::cout << std::endl;

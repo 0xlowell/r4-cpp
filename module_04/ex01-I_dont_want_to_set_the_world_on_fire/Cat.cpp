@@ -22,7 +22,8 @@ Cat::Cat ( const Cat &cpy ) {
 
 Cat &Cat::operator = ( const Cat & cpy) {
 	this->type = cpy.type;
-	this->_brain = cpy._brain;
+	this->_brain = new Brain();
+	*(this->_brain) = *(cpy._brain);
 	return (*this);
 }
 
