@@ -19,17 +19,16 @@ public:
 	AForm &operator = (const AForm &cpy);
 	virtual ~AForm();
 
-	virtual std::string getName();
-	virtual int getGradeToSign();
-	virtual int getExecute();
-	virtual bool getSign();
+	std::string getName();
+	int getGradeToSign();
+	int getExecute();
+	bool getSign();
 
-	virtual void Signature(const Bureaucrat &b);
+	virtual void Signature(const Bureaucrat &b) = 0;
 
 	// Check Grade Form
-	virtual void GradeCheckAForm();
-
-	virtual void execute(Bureaucrat const &executor) const;
+	virtual void GradeCheckAForm() = 0;
+	virtual void execute(Bureaucrat const &executor) const = 0;
 
 private:
 
@@ -51,7 +50,6 @@ private:
 			return ("Grade too high");
 		}
 	};
-
 };
 
 #endif //R4_CPP_AForm_H

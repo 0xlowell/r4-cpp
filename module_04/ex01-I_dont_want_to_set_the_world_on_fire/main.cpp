@@ -6,6 +6,10 @@
 #include "Cat.hpp"
 
 int main() {
+
+	Cat c; {
+		Cat c2(c);
+	}
 	std::cout << "TEST From Eval test" << std::endl;
 	Dog d;
 	std::cout << "_ideas[0] = " << d.getBrainDog()->getBrain() << std::endl;

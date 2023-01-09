@@ -17,11 +17,14 @@ Cat::~Cat() {
 }
 
 Cat::Cat ( const Cat &cpy ) {
+	this->_brain = NULL;
 	*this = cpy;
 }
 
 Cat &Cat::operator = ( const Cat & cpy) {
 	this->type = cpy.type;
+	if (this->_brain != NULL)
+		delete this->_brain;
 	this->_brain = new Brain();
 	*(this->_brain) = *(cpy._brain);
 	return (*this);

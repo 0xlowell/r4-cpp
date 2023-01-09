@@ -7,7 +7,8 @@
 
 Dog::Dog() {
 	setType ("dog");
-	_brain = new Brain();
+	this->_brain = new Brain();
+	std::cout << _brain << std::endl;
 	std::cout << "Constructor Dog" << std::endl;
 }
 
@@ -18,14 +19,12 @@ Dog::~Dog() {
 
 Dog::Dog ( const Dog &cpy ) {
 	std::cout << "Copy Constructor Dog " << std::endl;
+	this->_brain = new Brain();
 	*this = cpy;
 }
 
 Dog &Dog::operator = ( const Dog & cpy) {
 	this->type = cpy.type;
-//	if (this->_brain)
-//	delete this->_brain;
-	this->_brain = new Brain();
 	*(this->_brain) = *(cpy._brain);
 	return (*this);
 }
