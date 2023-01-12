@@ -6,7 +6,7 @@
 #include "Bureaucrat.hpp"
 
 Form::Form ( std::string name, int grade, int execute )
-: _name(name), _sign(false), _grade(grade), _execute(execute)
+: _name(name), _sign(false), _grade_to_sign(grade), _execute(execute)
 {
 	// this->GradeCheck();
 	std::cout << "++Form: " << _name << std::endl;
@@ -17,7 +17,7 @@ Form::~Form() {
 }
 
 Form::Form(const Form &cpy)
-:_name(cpy._name), _grade(cpy._grade), _execute(cpy._execute){
+:_name(cpy._name), _grade_to_sign(cpy._grade_to_sign), _execute(cpy._execute){
 	this->_sign = cpy._sign;
 }
 
@@ -32,7 +32,7 @@ std::string Form::getName() {
 }
 
 int Form::getGrade() {
-	return (this->_grade);
+	return (this->_grade_to_sign);
 }
 
 int Form::getExecute() {
@@ -44,15 +44,15 @@ bool Form::getSign() {
 }
 
 void Form::Signature(const Bureaucrat &b) {
-	if (b.getGrade() <= this->_grade)
+	if (b.getGrade() <= this->_grade_to_sign)
 		this->_sign = true;
 	else
 		throw Form::GradeTooLowException();
 }
 
 void Form::GradeCheckForm() {
-	(this->_grade < 0) ? throw Form::GradeTooLowException() :
-	(this->_grade > 150) ? throw Form::GradeTooHighException() :
+	(this->_grade_to_sign < 0) ? throw Form::GradeTooLowException() :
+	(this->_grade_to_sign > 150) ? throw Form::GradeTooHighException() :
 	std::cout << " Grade OK " << std::endl;
 }
 

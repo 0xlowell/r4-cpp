@@ -11,7 +11,11 @@ LIB = -ledit
 
 $(NAME): $(OBJ)
 	$(CC) -o $(NAME) $(OBJ) $(LIB)
-	@printf "✅ Compiled\n";
+	@printf "\n✅ Compiled\n";
+	@printf "🧹 Clean *.o\n";
+	$(RM) $(OBJ)
+	@printf "\n💽 Executable name: ";
+	@printf $(NAME)
 
 all: $(NAME)
 

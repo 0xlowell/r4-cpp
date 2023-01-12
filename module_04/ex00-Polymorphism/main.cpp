@@ -22,13 +22,15 @@ int main()
 
 		std::cout << std::endl;
 
-		std::cout << "What the Cat say:" << std::endl;
+		std::cout << "What the Cat say: " ;
 		cat->makeSound();
+		std::cout << std::endl;
 
-		std::cout << "What the Dog say:" << std::endl;
+		std::cout << "What the Dog say: " ;
 		dog->makeSound();
+		std::cout << std::endl;
 
-		std::cout << "Animal: no sound" << std::endl;
+		std::cout << "Animal: " ;
 		meta->makeSound();
 		std::cout << std::endl << std::endl;
 
@@ -41,29 +43,27 @@ int main()
 		std::cout << "WRONG type test: " << std::endl;
 
 		const WrongAnimal* meta = new WrongAnimal();
-		const Animal* dog = new Dog();
-		const WrongAnimal* cat = new WrongCat();
+		const WrongCat* cat = new WrongCat();
 
 		std::cout << std::endl;
 
-		std::cout << "🐶 : " << dog->getType() << " " << std::endl;
+		std::cout << "🐶 : " << meta->getType() << " " << std::endl;
 		std::cout << "😸 : " << cat->getType() << " " << std::endl;
 
 		std::cout << std::endl;
 
-		std::cout << "What the Dog say:" << std::endl;
-		dog->makeSound();
+		std::cout << "What the WrongAnimal say: " << std::endl;
+		meta->makeSound();
 
 		std::cout << "What the WrongCat say:" << std::endl;
 		cat->makeSound();
 
-		std::cout << "What the WrongAnimal say: " << std::endl;
-		meta->makeSound();
+
 
 		std::cout << std::endl << std::endl;
 
 		delete meta;
-		delete dog;
+
 		delete cat;
 	}
 }

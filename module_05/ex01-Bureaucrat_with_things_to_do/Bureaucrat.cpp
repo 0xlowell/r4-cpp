@@ -53,7 +53,6 @@ void Bureaucrat::decrementGrade() {
 
 void Bureaucrat::signForm(Form &f) {
 	try {
-
 		f.Signature(*this);
 		std::cout << BOLD_G << _name << " signed " << f.getName() << RESET << std::endl;
 	}

@@ -8,7 +8,7 @@
 int main()
 {
 	{
-//		Animal error;
+		Animal error;
 		Dog dog;
 	}
 }

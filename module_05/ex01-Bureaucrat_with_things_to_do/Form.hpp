@@ -30,7 +30,7 @@ public:
 private:
 	std::string _name;
 	bool 		_sign;
-	const int 	_grade;
+	const int 	_grade_to_sign;
 	const int 	_execute;
 
 	class GradeTooLowException : public std::exception {

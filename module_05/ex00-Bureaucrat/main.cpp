@@ -17,6 +17,11 @@ int main() {
 
 	std::cout << std::endl;
 	std::cout << "-----Error test-----" << std::endl;
+
+	std::cout << std::endl;
+
+	// Try-catch block
+
 	/*
 	 * When an exception is thrown, the current function terminates
 	 * and control is passed back to the calling function. If the
@@ -24,9 +29,6 @@ int main() {
 	 * will terminate.
 	 */
 
-	std::cout << std::endl;
-
-	// try-catch block
 	try {
 		// code that might throw Bureaucrat::GradeTooLowException
 		Bureaucrat low("low", 3);
