@@ -3,10 +3,11 @@
 //
 
 #include "PresidentialPardonForm.hpp"
+#include "Intern.hpp"
 
-PresidentialPardonForm::PresidentialPardonForm( const Bureaucrat &target ):
+PresidentialPardonForm::PresidentialPardonForm( const std::string &target ):
 AForm("Presidential Pardon Form", 25, 5 ), _target(target) {
-	std::cout << target <<  " request for a Presidential Pardon Form" << std::endl;
+	std::cout << "Request for a Presidential Pardon Form" << std::endl;
 }
 
 PresidentialPardonForm::~PresidentialPardonForm() {

@@ -2,7 +2,7 @@
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic -g3
 CC     = c++ $(CFLAGS)
-OBJ    = main.o Bureaucrat.o AForm.o PresidentialPardonForm.o RobotomRequestForm.o ShrubberyCreationForm.o
+OBJ    = main.o Bureaucrat.o AForm.o PresidentialPardonForm.o RobotomRequestForm.o ShrubberyCreationForm.o Intern.o
 NAME   = More_Bureaucrat
 LIB = -ledit
 

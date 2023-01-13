@@ -10,7 +10,7 @@
 
 class PresidentialPardonForm : public AForm {
 public:
-	PresidentialPardonForm(const Bureaucrat &target);
+	PresidentialPardonForm(const std::string &target);
 	~PresidentialPardonForm();
 	PresidentialPardonForm(const PresidentialPardonForm &p);
 	PresidentialPardonForm &operator=(const PresidentialPardonForm &p);
@@ -18,7 +18,7 @@ public:
 	void execute(const Bureaucrat &executor) const;
 
 private:
-	Bureaucrat _target;
+	std::string _target;
 };
 
 #endif //R4_CPP_PRESIDENTIALPARDONFORM_H

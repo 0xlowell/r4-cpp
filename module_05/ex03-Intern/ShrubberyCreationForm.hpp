@@ -9,7 +9,7 @@
 
 class ShrubberyCreationForm : public AForm {
 public :
-	ShrubberyCreationForm( const Bureaucrat &target );
+	ShrubberyCreationForm( const std::string &target );
 	~ShrubberyCreationForm();
 	ShrubberyCreationForm(const ShrubberyCreationForm &p);
 	ShrubberyCreationForm &operator = (const ShrubberyCreationForm &p);
@@ -17,7 +17,7 @@ public :
 	void execute(const Bureaucrat &executor) const;
 
 private:
-	Bureaucrat _target;
+	std::string _target;
 };
 
 

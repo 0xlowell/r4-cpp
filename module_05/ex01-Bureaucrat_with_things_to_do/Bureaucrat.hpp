@@ -23,7 +23,7 @@ class Bureaucrat {
 public:
 	Bureaucrat(std::string name, int grade);
 	~Bureaucrat();
-	Bureaucrat ( const Bureaucrat &cpy);
+	Bureaucrat ( const Bureaucrat &cpy );
 	Bureaucrat &operator = ( const Bureaucrat &cpy);
 
 	std::string getName () const;

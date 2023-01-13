@@ -5,9 +5,9 @@
 #include "ShrubberyCreationForm.hpp"
 #include <fstream>
 
-ShrubberyCreationForm::ShrubberyCreationForm( const Bureaucrat &target ):
+ShrubberyCreationForm::ShrubberyCreationForm( const std::string &target ):
 		AForm("Shrubbery Creation Form", 145, 137 ), _target(target) {
-	std::cout << target <<  " request for a Shrubbery Creation Form" << std::endl;
+	std::cout << "Request for a Shrubbery Creation Form" << std::endl;
 }
 
 ShrubberyCreationForm::~ShrubberyCreationForm() {

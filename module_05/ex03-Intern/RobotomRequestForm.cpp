@@ -5,9 +5,9 @@
 #include "RobotomRequestForm.hpp"
 #include <random>
 
-RobotomRequestForm::RobotomRequestForm( const Bureaucrat &target ):
+RobotomRequestForm::RobotomRequestForm( const std::string &target ):
 		AForm("Robotom Request Form", 72, 45 ), _target(target) {
-	std::cout << target <<  " request for a Robotom Request Form" << std::endl;
+	std::cout << "Request for a Robotom Request Form" << std::endl;
 }
 
 RobotomRequestForm::~RobotomRequestForm() {

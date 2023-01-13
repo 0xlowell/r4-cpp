@@ -9,7 +9,7 @@
 
 class RobotomRequestForm : public AForm {
 public:
-	RobotomRequestForm(const Bureaucrat &target);
+	RobotomRequestForm(const std::string &target);
 	~RobotomRequestForm();
 	RobotomRequestForm(const RobotomRequestForm &r);
 	RobotomRequestForm &operator = (const RobotomRequestForm &r);
@@ -17,7 +17,7 @@ public:
 	void execute(const Bureaucrat &executor) const;
 
 private:
-	Bureaucrat _target;
+	std::string _target;
 };
 
 
