@@ -2,8 +2,8 @@
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic -g3
 CC     = c++ $(CFLAGS)
-OBJ    = main.o Bureaucrat.o AForm.o PresidentialPardonForm.o RobotomRequestForm.o ShrubberyCreationForm.o Intern.o
-NAME   = Intern
+OBJ    = main.o Conversion.o
+NAME   = convert
 LIB = -ledit
 
 .cpp.o:

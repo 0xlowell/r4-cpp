@@ -12,8 +12,9 @@ int main() {
 
 	try {
 		Intern x;
-		x.makeForm("Presidential Pardon Form", "low");
-
+		AForm *ptr;
+		ptr = x.makeForm("Presintial Pardon Form", "low");
+		delete ptr;
 	}
 	catch (std::exception &e) {
 		std::cout << BOLD_RED " error "
