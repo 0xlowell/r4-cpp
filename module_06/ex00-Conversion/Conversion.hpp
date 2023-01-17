@@ -15,19 +15,27 @@
 class Conversion {
 
 public:
-	Conversion(char *s);
+	//Orthodox canonical form
+	Conversion(const char *s);
 	~Conversion();
 	Conversion (const Conversion &c);
 	Conversion &operator = (const Conversion &c);
 
+	// Utils fcts
 	static int all_good_digit(std::string &str);
-	static unsigned long setPrecision(const std::string& str);
+	static unsigned long getPrecision(const std::string& str);
+	void stod(const std::string &str);
+
+
+	//Getters
+	int getOk() const;
+	double getV() const;
+	std::string  getS() const;
 
 private:
-	char 	_c;
-	float 	_f;
-	double 	_d;
-	bool 	_isOk;
+	std::string _str;
+	double		_v;
+	bool 		_isOk;
 
 
 

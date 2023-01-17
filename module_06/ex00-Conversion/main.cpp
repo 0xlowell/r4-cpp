@@ -15,6 +15,7 @@ int main(int ac, char* av[]) {
 		return 1;
 	}
 
-	Conversion n;
-	n.Convert(av[1]);
+
+	Conversion n(av[1]);
+	std::cout << n;
 }

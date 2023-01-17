@@ -15,7 +15,9 @@ $(NAME): $(OBJ)
 	@printf "🧹 Clean *.o\n";
 	$(RM) $(OBJ)
 	@printf "\n💽 Executable name: ";
-	@printf $(NAME)
+	@printf "./"$(NAME)
+	@printf '\n'
+	@printf '\n'
 
 all: $(NAME)
 
