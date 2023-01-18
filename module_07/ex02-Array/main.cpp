@@ -2,7 +2,7 @@
 // Created by Lo on 18/01/2023.
 //
 #include <iostream>
-#include "Array.tpp"
+#include "Array.hpp"
 
 int main() {
 	Array<int> array_v(3);
