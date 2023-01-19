@@ -43,15 +43,19 @@ public :
 		return (this->_arr[idx]);
 	}
 
+	T  &operator [](std::size_t idx) const {
+		if (idx >= this->_size)
+			throw std::overflow_error("Index outbound");
+		return (this->_arr[idx]);
+	}
+
 	unsigned int size() const {
 		return (this->_size);
 	}
 
-
-
 private:
 	unsigned int 	_size;
-	int				*_arr;
+	T				*_arr;
 };
 
 
