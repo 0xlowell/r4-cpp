@@ -18,6 +18,7 @@ public:
 	Span &operator=(const Span &s);
 
 	void addNumber(int number); // Fill the integer tab with this function (quantity: no more than N)
+	void addVector(const std::vector<int> &v);
 	int shortestSpan(); // distance between all the numbers store
 	int longestSpan();
 

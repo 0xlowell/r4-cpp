@@ -29,10 +29,9 @@ void Span::addNumber(int number) {
 	this->_vect.push_back(number);
 }
 
-void f(const std::vector<int> &c) {
-	std::random_device rd;
-	int i = rd();
-	std::for_each(c.begin(), c.end(), addNumber(i) );
+void Span::addVector(const std::vector<int> &v) {
+	for (unsigned int i = 0 ; i < v.size(); i++)
+		addNumber(v[i]);
 }
 
 int Span::shortestSpan() {
