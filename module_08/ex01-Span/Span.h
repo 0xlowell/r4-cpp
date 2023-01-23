@@ -5,29 +5,40 @@
 #ifndef R4_CPP_SPAN_H
 #define R4_CPP_SPAN_H
 #include <exception>
+#include <vector>
+#include <iostream>
+#include <random>
 
 class Span {
 public:
 	Span(unsigned int N); // Store N integers
 	~Span();
 
-	Span(const Span &c);
-	Span &operator=(const Span &c);
+	Span(const Span &s);
+	Span &operator=(const Span &s);
 
-	void addNumber(); // Fill the integer tab with this function (quantity: no more than N)
-	void shortestSpan(); // distance between all the numbers store
-	void longestSpan();
+	void addNumber(int number); // Fill the integer tab with this function (quantity: no more than N)
+	int shortestSpan(); // distance between all the numbers store
+	int longestSpan();
 
 	class SpanError : public std::exception {
 	public:
 		const char* what() const throw() {
-			return ("There are no numbers stored, or only one, no span can be found.");
+			return ("There are no numbers stored, or only one, no shortest or longest span can be found.");
+		}
+	};
+	class SizeError : public std::exception {
+	public:
+		const char* what() const throw() {
+			return ("Too much numbers added to the vector.");
 		}
 	};
 
 private:
-
+	unsigned int	_n;
+	std::vector<int> _vect;
 };
+
 
 
 #endif //R4_CPP_SPAN_H
